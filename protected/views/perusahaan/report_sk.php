@@ -40,7 +40,7 @@ $this->pageTitle='Manage Perusahaan';
 
 					<div class="pad margin no-print">
 						<div class="alert alert-info" style="margin-bottom: 0!important;">
-							<center>Laporan SK Perusahaan Berhasil di Buat ke Excel, <b><a href="./Laporan SK.xls"/>Download Laporan SK Perusahaan</a></b></center>
+							<center>Laporan PP Perusahaan Berhasil di Buat ke Excel, <b><a href="./Laporan PP.xls"/>Download Laporan PP Perusahaan</a></b></center>
 						</div>
 					</div>
 

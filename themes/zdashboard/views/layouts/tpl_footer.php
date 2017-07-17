@@ -1,5 +1,5 @@
 <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script src="<?php echo Yii::app()->theme->baseUrl; ?>/plugins/select2.min.js"></script>
 <script type="text/javascript">
 	$('select').select2();
 </script>
