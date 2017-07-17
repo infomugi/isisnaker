@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2017 at 11:03 AM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: Jul 17, 2017 at 05:17 AM
+-- Server version: 5.6.26
+-- PHP Version: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_project_sisnaker`
+-- Database: `i_sisnaker`
 --
 
 -- --------------------------------------------------------
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `activities`
 --
 
-CREATE TABLE `activities` (
+CREATE TABLE IF NOT EXISTS `activities` (
   `id_activities` int(11) NOT NULL,
   `created_date` datetime NOT NULL,
   `type` int(11) NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE `activities` (
   `user_id` int(11) NOT NULL,
   `point` int(11) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=1994 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `activities`
@@ -2035,7 +2035,8 @@ INSERT INTO `activities` (`id_activities`, `created_date`, `type`, `description`
 (1989, '2017-07-14 14:41:26', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
 (1990, '2017-07-14 14:41:29', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
 (1991, '2017-07-14 14:41:48', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
-(1992, '2017-07-14 14:41:52', 1, 'Login dari IP : ::1', 1, 3, 3, 0);
+(1992, '2017-07-14 14:41:52', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(1993, '2017-07-16 22:38:52', 1, 'Login dari IP : ::1', 1, 3, 3, 0);
 
 -- --------------------------------------------------------
 
@@ -2043,12 +2044,12 @@ INSERT INTO `activities` (`id_activities`, `created_date`, `type`, `description`
 -- Table structure for table `agama`
 --
 
-CREATE TABLE `agama` (
+CREATE TABLE IF NOT EXISTS `agama` (
   `id` int(11) NOT NULL,
   `kd_agama` smallint(6) NOT NULL,
   `mnemonic` varchar(1) DEFAULT NULL,
   `nama` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `agama`
@@ -2069,12 +2070,12 @@ INSERT INTO `agama` (`id`, `kd_agama`, `mnemonic`, `nama`) VALUES
 -- Table structure for table `bagian`
 --
 
-CREATE TABLE `bagian` (
+CREATE TABLE IF NOT EXISTS `bagian` (
   `id_bagian` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `deskripsi` text NOT NULL,
   `status` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `bagian`
@@ -2092,14 +2093,14 @@ INSERT INTO `bagian` (`id_bagian`, `nama`, `deskripsi`, `status`) VALUES
 -- Table structure for table `desa`
 --
 
-CREATE TABLE `desa` (
+CREATE TABLE IF NOT EXISTS `desa` (
   `id` int(11) NOT NULL,
   `kd_desa` smallint(6) NOT NULL,
   `kd_kecamatan` smallint(6) DEFAULT NULL,
   `mnemonic` varchar(3) DEFAULT NULL,
   `nama` varchar(50) DEFAULT NULL,
   `KK2012` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=284 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `desa`
@@ -2396,12 +2397,12 @@ INSERT INTO `desa` (`id`, `kd_desa`, `kd_kecamatan`, `mnemonic`, `nama`, `KK2012
 -- Table structure for table `industri`
 --
 
-CREATE TABLE `industri` (
+CREATE TABLE IF NOT EXISTS `industri` (
   `id` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `deskripsi` varchar(255) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=410 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `industri`
@@ -2824,12 +2825,12 @@ INSERT INTO `industri` (`id`, `nama`, `deskripsi`, `status`) VALUES
 -- Table structure for table `jurusan`
 --
 
-CREATE TABLE `jurusan` (
+CREATE TABLE IF NOT EXISTS `jurusan` (
   `id` int(11) NOT NULL,
   `kd_jurusan` int(11) NOT NULL,
   `kd_pendidikan` smallint(6) DEFAULT NULL,
   `nama` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `jurusan`
@@ -2870,13 +2871,13 @@ INSERT INTO `jurusan` (`id`, `kd_jurusan`, `kd_pendidikan`, `nama`) VALUES
 -- Table structure for table `kecamatan`
 --
 
-CREATE TABLE `kecamatan` (
+CREATE TABLE IF NOT EXISTS `kecamatan` (
   `id` int(11) NOT NULL,
   `kd_kecamatan` smallint(6) NOT NULL,
   `mnemonic` varchar(2) DEFAULT NULL,
   `kd_areasurvey` smallint(6) DEFAULT NULL,
   `nama` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `kecamatan`
@@ -2921,10 +2922,10 @@ INSERT INTO `kecamatan` (`id`, `kd_kecamatan`, `mnemonic`, `kd_areasurvey`, `nam
 -- Table structure for table `level`
 --
 
-CREATE TABLE `level` (
+CREATE TABLE IF NOT EXISTS `level` (
   `level_ID` int(10) NOT NULL,
   `level` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `level`
@@ -2939,11 +2940,11 @@ INSERT INTO `level` (`level_ID`, `level`) VALUES
 -- Table structure for table `pekerjaan`
 --
 
-CREATE TABLE `pekerjaan` (
+CREATE TABLE IF NOT EXISTS `pekerjaan` (
   `id` int(11) NOT NULL,
   `kd_pekerjaan` smallint(6) DEFAULT NULL,
   `nama` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `pekerjaan`
@@ -2969,7 +2970,7 @@ INSERT INTO `pekerjaan` (`id`, `kd_pekerjaan`, `nama`) VALUES
 -- Table structure for table `pencaker`
 --
 
-CREATE TABLE `pencaker` (
+CREATE TABLE IF NOT EXISTS `pencaker` (
   `kd_pencaker` mediumint(11) NOT NULL,
   `nama` varchar(60) DEFAULT NULL,
   `tempatlahir` varchar(50) DEFAULT NULL,
@@ -2995,7 +2996,7 @@ CREATE TABLE `pencaker` (
   `kd_operator` smallint(6) DEFAULT NULL,
   `migrasi` tinyint(1) DEFAULT '0',
   `waktumigrasi` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `pencaker`
@@ -3105,7 +3106,7 @@ INSERT INTO `pencaker` (`kd_pencaker`, `nama`, `tempatlahir`, `tgllahir`, `jenis
 -- Table structure for table `pencarikerja`
 --
 
-CREATE TABLE `pencarikerja` (
+CREATE TABLE IF NOT EXISTS `pencarikerja` (
   `id_pencarikerja` int(11) NOT NULL,
   `nomor` int(11) NOT NULL,
   `tanggal` date NOT NULL,
@@ -3140,11 +3141,11 @@ CREATE TABLE `pencarikerja` (
 -- Table structure for table `pendidikan`
 --
 
-CREATE TABLE `pendidikan` (
+CREATE TABLE IF NOT EXISTS `pendidikan` (
   `id` int(11) NOT NULL,
   `kd_pendidikan` smallint(6) DEFAULT NULL,
   `nama` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `pendidikan`
@@ -3173,7 +3174,7 @@ INSERT INTO `pendidikan` (`id`, `kd_pendidikan`, `nama`) VALUES
 -- Table structure for table `perusahaan`
 --
 
-CREATE TABLE `perusahaan` (
+CREATE TABLE IF NOT EXISTS `perusahaan` (
   `id` int(11) NOT NULL,
   `klui` varchar(15) NOT NULL,
   `nama` varchar(150) NOT NULL,
@@ -3208,7 +3209,7 @@ CREATE TABLE `perusahaan` (
   `kopkar_tidak_badan_hukum` varchar(50) NOT NULL,
   `keterangan` text NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2349 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `perusahaan`
@@ -5583,7 +5584,7 @@ INSERT INTO `perusahaan` (`id`, `klui`, `nama`, `alamat`, `pimpinan`, `kecamatan
 -- Table structure for table `responden`
 --
 
-CREATE TABLE `responden` (
+CREATE TABLE IF NOT EXISTS `responden` (
   `kd_responden` int(11) NOT NULL,
   `kd_umpi` int(11) DEFAULT NULL,
   `sdrt` int(11) DEFAULT NULL,
@@ -5614,7 +5615,7 @@ CREATE TABLE `responden` (
   `kd_operator` smallint(6) DEFAULT NULL,
   `migrasi` tinyint(1) DEFAULT '0',
   `waktumigrasi` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=654 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `responden`
@@ -6242,11 +6243,11 @@ INSERT INTO `responden` (`kd_responden`, `kd_umpi`, `sdrt`, `nomor`, `nama`, `kd
 -- Table structure for table `sdrt`
 --
 
-CREATE TABLE `sdrt` (
+CREATE TABLE IF NOT EXISTS `sdrt` (
   `Id` int(11) NOT NULL,
   `kode` tinyint(3) DEFAULT NULL,
   `nama` varchar(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sdrt`
@@ -6265,7 +6266,7 @@ INSERT INTO `sdrt` (`Id`, `kode`, `nama`) VALUES
 -- Table structure for table `serikat`
 --
 
-CREATE TABLE `serikat` (
+CREATE TABLE IF NOT EXISTS `serikat` (
   `id` int(11) NOT NULL,
   `kode` varchar(30) NOT NULL,
   `nama` varchar(50) NOT NULL,
@@ -6274,7 +6275,7 @@ CREATE TABLE `serikat` (
   `kategori_id` int(11) NOT NULL,
   `kecamatan_id` int(11) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `serikat`
@@ -6302,15 +6303,38 @@ INSERT INTO `serikat` (`id`, `kode`, `nama`, `alamat`, `kontak`, `kategori_id`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `serikat_perusahaan`
+--
+
+CREATE TABLE IF NOT EXISTS `serikat_perusahaan` (
+  `id_serikat_perusahaan` int(11) NOT NULL,
+  `serikat_id` int(11) NOT NULL,
+  `perusahaan_id` int(11) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `serikat_perusahaan`
+--
+
+INSERT INTO `serikat_perusahaan` (`id_serikat_perusahaan`, `serikat_id`, `perusahaan_id`, `status`) VALUES
+(2, 1, 930, 1),
+(3, 1, 2016, 1),
+(4, 4, 1055, 1),
+(5, 9, 1007, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `statusnikah`
 --
 
-CREATE TABLE `statusnikah` (
+CREATE TABLE IF NOT EXISTS `statusnikah` (
   `id` int(11) NOT NULL,
   `kd_statusnikah` smallint(6) DEFAULT NULL,
   `nama` varchar(13) DEFAULT NULL,
   `mnemonic` varchar(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `statusnikah`
@@ -6328,7 +6352,7 @@ INSERT INTO `statusnikah` (`id`, `kd_statusnikah`, `nama`, `mnemonic`) VALUES
 -- Table structure for table `umpi`
 --
 
-CREATE TABLE `umpi` (
+CREATE TABLE IF NOT EXISTS `umpi` (
   `kd_umpi` int(11) NOT NULL,
   `tglupdate` date DEFAULT NULL,
   `nomorformulir` varchar(10) CHARACTER SET latin1 DEFAULT NULL,
@@ -6346,7 +6370,7 @@ CREATE TABLE `umpi` (
   `waktuupdate` datetime DEFAULT NULL,
   `kd_operator` smallint(6) DEFAULT NULL,
   `ip_client` varchar(100) CHARACTER SET latin1 DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=920915 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `umpi`
@@ -6880,7 +6904,7 @@ INSERT INTO `umpi` (`kd_umpi`, `tglupdate`, `nomorformulir`, `kd_desa`, `nama`, 
 -- Table structure for table `user`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE IF NOT EXISTS `user` (
   `id_user` int(10) NOT NULL,
   `created_date` date NOT NULL,
   `update_date` date NOT NULL,
@@ -6895,7 +6919,7 @@ CREATE TABLE `user` (
   `bagian` int(11) NOT NULL,
   `level` int(10) NOT NULL,
   `image` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
@@ -6903,7 +6927,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `created_date`, `update_date`, `last_login`, `username`, `password`, `email`, `namalengkap`, `tanggallahir`, `handphone`, `alamat`, `bagian`, `level`, `image`) VALUES
 (1, '2016-05-10', '2016-08-09', '2016-11-04 02:34:04', 'mugi', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', 'Mugi Rachmat', '0000-00-00', '087824931504', 'A', 1, 2, ''),
-(3, '2016-06-10', '0000-00-00', '2017-07-14 02:41:48', 'lucky', '21232f297a57a5a743894a0e4a801fc3', 'lucky@gmail.com', '', '0000-00-00', '', '', 2, 2, ''),
+(3, '2016-06-10', '0000-00-00', '2017-07-14 02:41:48', 'syaker', '21232f297a57a5a743894a0e4a801fc3', 'lucky@gmail.com', '', '0000-00-00', '', '', 2, 2, ''),
 (4, '2016-06-10', '0000-00-00', '2017-07-14 02:32:53', 'smk', '21232f297a57a5a743894a0e4a801fc3', 'smk@gmail.com', '', '0000-00-00', '', '', 1, 2, ''),
 (5, '2016-05-10', '2016-07-27', '2017-07-14 02:41:26', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', 'Mugi Rachmat', '0000-00-00', '1212', '121212aaa', 2, 1, 'admin.jpg');
 
@@ -7020,6 +7044,12 @@ ALTER TABLE `serikat`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `serikat_perusahaan`
+--
+ALTER TABLE `serikat_perusahaan`
+  ADD PRIMARY KEY (`id_serikat_perusahaan`);
+
+--
 -- Indexes for table `statusnikah`
 --
 ALTER TABLE `statusnikah`
@@ -7050,52 +7080,52 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `activities`
 --
 ALTER TABLE `activities`
-  MODIFY `id_activities` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1993;
+  MODIFY `id_activities` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1994;
 --
 -- AUTO_INCREMENT for table `agama`
 --
 ALTER TABLE `agama`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `bagian`
 --
 ALTER TABLE `bagian`
-  MODIFY `id_bagian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_bagian` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `desa`
 --
 ALTER TABLE `desa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=284;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=284;
 --
 -- AUTO_INCREMENT for table `industri`
 --
 ALTER TABLE `industri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=410;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=410;
 --
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `kecamatan`
 --
 ALTER TABLE `kecamatan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT for table `level`
 --
 ALTER TABLE `level`
-  MODIFY `level_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `level_ID` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `pekerjaan`
 --
 ALTER TABLE `pekerjaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `pencaker`
 --
 ALTER TABLE `pencaker`
-  MODIFY `kd_pencaker` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `kd_pencaker` mediumint(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=97;
 --
 -- AUTO_INCREMENT for table `pencarikerja`
 --
@@ -7105,42 +7135,47 @@ ALTER TABLE `pencarikerja`
 -- AUTO_INCREMENT for table `pendidikan`
 --
 ALTER TABLE `pendidikan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `perusahaan`
 --
 ALTER TABLE `perusahaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2349;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2349;
 --
 -- AUTO_INCREMENT for table `responden`
 --
 ALTER TABLE `responden`
-  MODIFY `kd_responden` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=654;
+  MODIFY `kd_responden` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=654;
 --
 -- AUTO_INCREMENT for table `sdrt`
 --
 ALTER TABLE `sdrt`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `serikat`
 --
 ALTER TABLE `serikat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
+--
+-- AUTO_INCREMENT for table `serikat_perusahaan`
+--
+ALTER TABLE `serikat_perusahaan`
+  MODIFY `id_serikat_perusahaan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `statusnikah`
 --
 ALTER TABLE `statusnikah`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `umpi`
 --
 ALTER TABLE `umpi`
-  MODIFY `kd_umpi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=920915;
+  MODIFY `kd_umpi` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=920915;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
