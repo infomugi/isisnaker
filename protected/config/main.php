@@ -7,8 +7,8 @@
 // Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'SISNAKER',
-	'theme' => 'mugisisnaker',
+	'name'=>'E-SYAKER',
+	'theme' => 'zdashboard',
 	'language'=>'id',
 	'timeZone'=>'Asia/Jakarta',	
 
@@ -70,7 +70,7 @@ return array(
 		// ),
 
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=db_project_sisnaker',
+			'connectionString' => 'mysql:host=localhost;dbname=i_sisnaker',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

@@ -198,7 +198,28 @@
 
 				<div class="col-sm-8">
 					<?php echo $form->error($model,'perusahaan_mulai_berlaku'); ?>
-					<?php echo $form->textField($model,'perusahaan_mulai_berlaku',array('class'=>'form-control')); ?>
+					<?php
+					$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+						'model'=>$model,
+						'language'=>'id',
+						'attribute'=>'perusahaan_mulai_berlaku',
+						'value'=>Yii::app()->dateFormatter->format("dd-MM-yyyy",strtotime($model->perusahaan_mulai_berlaku)),
+						'htmlOptions'=>array(
+							'class'=>'form-control',
+							'tabindex'=>2
+							),
+						'options'=>array(
+							'dateFormat' => 'd-mm-yy',
+							'language'=>'id',
+							'showAnim'=>'drop',
+							'showButtonPanel'=>true,
+							'changeMonth'=>true,
+							'yearRange'=>'1960:2000',
+							'changeYear'=>true,
+							'defaultDate'=>'+1w',
+							),
+						));
+						?>
 				</div>
 				
 			</div>  
@@ -212,7 +233,28 @@
 
 				<div class="col-sm-8">
 					<?php echo $form->error($model,'perusahaan_akhir_berlaku'); ?>
-					<?php echo $form->textField($model,'perusahaan_akhir_berlaku',array('class'=>'form-control')); ?>
+					<?php
+					$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+						'model'=>$model,
+						'language'=>'id',
+						'attribute'=>'perusahaan_akhir_berlaku',
+						'value'=>Yii::app()->dateFormatter->format("dd-MM-yyyy",strtotime($model->perusahaan_akhir_berlaku)),
+						'htmlOptions'=>array(
+							'class'=>'form-control',
+							'tabindex'=>2
+							),
+						'options'=>array(
+							'dateFormat' => 'd-mm-yy',
+							'language'=>'id',
+							'showAnim'=>'drop',
+							'showButtonPanel'=>true,
+							'changeMonth'=>true,
+							'yearRange'=>'1960:2000',
+							'changeYear'=>true,
+							'defaultDate'=>'+1w',
+							),
+						));
+						?>
 				</div>
 				
 			</div>  

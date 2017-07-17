@@ -7,9 +7,12 @@ $this->breadcrumbs=array(
 	);
 
 	$this->pageTitle='Daftar Industri';
+
+	$jumlah_sektor =  Yii::app()->db->createCommand("SELECT COUNT(id) FROM Industri")->queryScalar();
+	$tidak_terdaftar =  Yii::app()->db->createCommand("SELECT COUNT(id) FROM perusahaan where jenis_usaha=''")->queryScalar();
+
 	?>
 
-	<section class="col-xs-12">
 
 		<?php echo CHtml::link('Tambah Industri',
  array('tambah'),
@@ -22,9 +25,12 @@ $this->breadcrumbs=array(
 
 		<HR>
 
+		<div class="alert alert-warning">
+			Total Sektor Industri di Kab. Bandung <b><?php echo $jumlah_sektor; ?></b> Industri, ada sekitar <b><?php echo $tidak_terdaftar; ?></b> Perusahaan tidak terdaftar.
+		</div>
+
 			<?php $this->widget('zii.widgets.CListView', array(
 			'dataProvider'=>$dataProvider,
 			'itemView'=>'_view',
 			)); ?>
 
-		</section>

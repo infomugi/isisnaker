@@ -31,7 +31,7 @@ class SiteController extends Controller
 
 			$this->actionLogin();
 		}else{
-			$this->layout="list";
+			
 
 			$dataProvider=new CActiveDataProvider('Kecamatan',array(
 				'criteria'=>array(
@@ -90,7 +90,7 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
-		$this->layout="frontend";		
+		$this->layout="signin";		
 		$model=new LoginForm;
 
 		// if it is ajax validation request

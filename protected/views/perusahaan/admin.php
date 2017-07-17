@@ -14,11 +14,11 @@ $this->pageTitle='Manage Perusahaan';
 
 	<?php echo CHtml::link('<i class="fa fa-plus"></i>',
 		array('create'),
-		array('class' => 'btn btn-primary btn-md'));
+		array('class' => 'btn btn-success btn-md'));
 		?>
 		<?php echo CHtml::link('<i class="fa fa-tasks"></i>',
 			array('index'),
-			array('class' => 'btn btn-primary btn-md'));
+			array('class' => 'btn btn-success btn-md'));
 			?>
 
 		</span> 
@@ -27,11 +27,11 @@ $this->pageTitle='Manage Perusahaan';
 
 			<?php echo CHtml::link('Add Perusahaan',
 				array('create'),
-				array('class' => 'btn btn-primary btn-flat'));
+				array('class' => 'btn btn-success btn-flat'));
 				?>
 				<?php echo CHtml::link('List Perusahaan',
 					array('index'),
-					array('class' => 'btn btn-primary btn-flat'));
+					array('class' => 'btn btn-success btn-flat'));
 					?>
 
 				</span>	
@@ -51,15 +51,15 @@ $this->pageTitle='Manage Perusahaan';
 								'htmlOptions'=>array('width'=>'10px', 
 									'style' => 'text-align: center;')),
 
-							// 'id',
 							'klui',
 							'nama',
 							'alamat',
 							'kecamatan',
-							// 'jenis_usaha',
 							'jenis_pemodalan',
 							'klasifikasi',
 							
+							// 'id',
+							// 'jenis_usaha',
 							// 'pimpinan',
 							// 'jumlah_tki_wanita',
 							// 'jumlah_tki_pria',
@@ -94,13 +94,6 @@ $this->pageTitle='Manage Perusahaan';
 									'view'=>
 									array(
 										'url'=>'Yii::app()->createUrl("Perusahaan/view", array("id"=>$data->id))',
-										'options'=>array(
-											'ajax'=>array(
-												'type'=>'POST',
-												'url'=>"js:$(this).attr('href')",
-												'success'=>'function(data) { $("#viewModal .modal-body p").html(data); $("#viewModal").modal(); }'
-												),
-											),
 										),
 									),
 								),

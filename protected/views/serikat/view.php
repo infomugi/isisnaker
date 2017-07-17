@@ -17,6 +17,10 @@ $this->breadcrumbs=array(
 	 array('tambah'),
  array('class' => 'btn btn-success btn-flat','title'=>'Tambah Serikat'));
 		 ?>
+		 		<?php echo CHtml::link('Tambahkan Perusahaan',
+	 array('serikatperusahaan/tambah', 'id'=>$model->id),
+ array('class' => 'btn btn-success btn-flat','title'=>'Tambahkan Perusahaan'));
+		 ?>
 		<?php echo CHtml::link('List',
 	 array('daftar'),
  array('class' => 'btn btn-success btn-flat', 'title'=>'Daftar Serikat'));
@@ -40,16 +44,55 @@ $this->breadcrumbs=array(
 			'data'=>$model,
 			'htmlOptions'=>array("class"=>"table"),
 			'attributes'=>array(
-						'id',
+						// 'id',
 		'kode',
 		'nama',
 		'alamat',
 		'kontak',
-		'kategori_id',
-		'kecamatan_id',
-		'status',
+		// 'kategori_id',
+		// 'kecamatan_id',
+		// 'status',
 				),
 				)); ?>
+
+				<?php $this->widget('zii.widgets.grid.CGridView', array(
+						'id'=>'perusahaan-grid',
+						'dataProvider'=>$dataProvider,
+						'itemsCssClass' => 'table-responsive table table-striped table-hover table-vcenter',
+						'columns'=>array(
+
+							array(
+								'header'=>'No',
+								'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',
+								'htmlOptions'=>array('width'=>'10px', 
+									'style' => 'text-align: center;')),
+
+							array('header'=>'Nama Perusahaan','value'=>'$data->Perusahaan->nama'),
+							// array('header'=>'Pimpinan','value'=>'$data->Perusahaan->pimpinan'),
+							array('header'=>'Alamat','value'=>'$data->Perusahaan->alamat'),
+							array('header'=>'Kecamatan','value'=>'$data->Perusahaan->kecamatan'),
+							array('header'=>'Jenis Usaha','value'=>'$data->Perusahaan->jenis_usaha'),
+						
+							array(
+								'class'=>'CButtonColumn',
+								'template'=>'{view}{delete}',
+								'buttons'=>array(
+									'view'=>
+									array(
+										'url'=>'Yii::app()->createUrl("perusahaan/view", array("id"=>$data->Perusahaan->id))',
+										),
+									'delete'=>
+									array(
+										'url'=>'Yii::app()->createUrl("serikatperusahaan/delete", array("id"=>$data->id_serikat_perusahaan))',
+										),									
+									),
+								),
+							),
+							)); ?>
+
+
+
+						
 
 			</section>
 

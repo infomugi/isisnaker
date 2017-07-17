@@ -13,15 +13,15 @@ $this->pageTitle='List Perusahaan';
 
 	<?php echo CHtml::link('<i class="fa fa-plus"></i>',
 		array('create'),
-		array('class' => 'btn btn-primary btn-flat','title'=>'Add Perusahaan'));
+		array('class' => 'btn btn-success btn-flat','title'=>'Add Perusahaan'));
 		?>
 		<?php echo CHtml::link('<i class="fa fa-tasks"></i>',
 			array('index'),
-			array('class' => 'btn btn-primary btn-flat', 'title'=>'List Perusahaan'));
+			array('class' => 'btn btn-success btn-flat', 'title'=>'List Perusahaan'));
 			?>
 			<?php echo CHtml::link('<i class="fa fa-table"></i>',
 				array('admin'),
-				array('class' => 'btn btn-primary btn-flat','title'=>'Manage Perusahaan'));
+				array('class' => 'btn btn-success btn-flat','title'=>'Manage Perusahaan'));
 				?>
 
 			</span> 
@@ -30,15 +30,15 @@ $this->pageTitle='List Perusahaan';
 
 				<?php echo CHtml::link('Add',
 					array('create'),
-					array('class' => 'btn btn-primary btn-flat','title'=>'Add Perusahaan'));
+					array('class' => 'btn btn-success btn-flat','title'=>'Add Perusahaan'));
 					?>
 					<?php echo CHtml::link('List',
 						array('index'),
-						array('class' => 'btn btn-primary btn-flat', 'title'=>'List Perusahaan'));
+						array('class' => 'btn btn-success btn-flat', 'title'=>'List Perusahaan'));
 						?>
 						<?php echo CHtml::link('Manage',
 							array('admin'),
-							array('class' => 'btn btn-primary btn-flat','title'=>'Manage Perusahaan'));
+							array('class' => 'btn btn-success btn-flat','title'=>'Manage Perusahaan'));
 							?>
 
 						</span>

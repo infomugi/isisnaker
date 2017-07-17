@@ -57,7 +57,7 @@ class Perusahaan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('klui, nama, alamat, pimpinan, kecamatan, jenis_usaha, jenis_pemodalan, jumlah_tki_wanita, jumlah_tki_pria, jumlah_tka_wanita, jumlah_tka_pria, klasifikasi, perusahaan_mulai_berlaku, perusahaan_akhir_berlaku, perusahaan_nomor_sk, serikat_nama, serikat_nomor, serikat_jumlah_wanita, serikat_jumlah_pria, serikat_ketua, bipartit_nomor, bipartit_mulai_berlaku, bipartit_akhir_berlaku, apindo_anggota_aktif, apindo_no_kontak, bpjs_ketenagakerjaan_wanita, bpjs_ketenagakerjaan_pria, bpjs_kesehatan_wanita, bpjs_kesehatan_pria, kopkar_badan_hukum, kopkar_tidak_badan_hukum, keterangan, status', 'required'),
+			// array('klui, nama, alamat, pimpinan, kecamatan, jenis_usaha, jenis_pemodalan, jumlah_tki_wanita, jumlah_tki_pria, jumlah_tka_wanita, jumlah_tka_pria, klasifikasi, perusahaan_mulai_berlaku, perusahaan_akhir_berlaku, perusahaan_nomor_sk, serikat_nama, serikat_nomor, serikat_jumlah_wanita, serikat_jumlah_pria, serikat_ketua, bipartit_nomor, bipartit_mulai_berlaku, bipartit_akhir_berlaku, apindo_anggota_aktif, apindo_no_kontak, bpjs_ketenagakerjaan_wanita, bpjs_ketenagakerjaan_pria, bpjs_kesehatan_wanita, bpjs_kesehatan_pria, kopkar_badan_hukum, kopkar_tidak_badan_hukum, keterangan, status', 'required'),
 			array('jumlah_tki_wanita, jumlah_tki_pria, jumlah_tka_wanita, jumlah_tka_pria, serikat_jumlah_wanita, serikat_jumlah_pria, apindo_anggota_aktif, bpjs_ketenagakerjaan_wanita, bpjs_ketenagakerjaan_pria, bpjs_kesehatan_wanita, bpjs_kesehatan_pria, status', 'numerical', 'integerOnly'=>true),
 			array('klui', 'length', 'max'=>15),
 			array('nama', 'length', 'max'=>150),
@@ -191,5 +191,31 @@ class Perusahaan extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	protected function beforeSave()
+	{
+		$this->perusahaan_akhir_berlaku = date('Y-m-d', strtotime($this->perusahaan_akhir_berlaku));
+		$this->perusahaan_mulai_berlaku = date('Y-m-d', strtotime($this->perusahaan_mulai_berlaku));
+		$this->bipartit_akhir_berlaku = date('Y-m-d', strtotime($this->bipartit_akhir_berlaku));
+		$this->bipartit_mulai_berlaku = date('Y-m-d', strtotime($this->bipartit_mulai_berlaku));
+		return TRUE;
+	}
+	
+	protected function afterFind()
+	{
+		$this->perusahaan_akhir_berlaku = date('d-m-Y', strtotime($this->perusahaan_akhir_berlaku));
+		$this->perusahaan_mulai_berlaku = date('d-m-Y', strtotime($this->perusahaan_mulai_berlaku));
+		$this->bipartit_akhir_berlaku = date('d-m-Y', strtotime($this->bipartit_akhir_berlaku));
+		$this->bipartit_mulai_berlaku = date('d-m-Y', strtotime($this->bipartit_mulai_berlaku));
+		return TRUE;
+	}	
+
+	public function tanggal($data){
+		if($data=="01-01-1970"){
+			return "-";
+		}else{
+			return $data;
+		}
 	}
 }

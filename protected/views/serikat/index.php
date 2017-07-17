@@ -9,8 +9,6 @@ $this->breadcrumbs=array(
 	$this->pageTitle='Daftar Serikat';
 	?>
 
-	<section class="col-xs-12">
-
 		<?php echo CHtml::link('Tambah Serikat',
  array('tambah'),
  array('class' => 'btn btn-success btn-flat'));
@@ -27,4 +25,3 @@ $this->breadcrumbs=array(
 			'itemView'=>'_view',
 			)); ?>
 
-		</section>

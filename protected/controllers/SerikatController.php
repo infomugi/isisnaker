@@ -33,7 +33,7 @@ class SerikatController extends Controller
 				'expression'=>'Yii::app()->user->getLevel()==1',
 				),
 			array('allow',
-				'actions'=>array('tambah','update','view','delete','kelola','daftar','view'),
+				'actions'=>array('tambah','update','view','delete','kelola','daftar','view','perusahaan'),
 				'users'=>array('@'),
 				'expression'=>'Yii::app()->user->getLevel()==2',
 				),			
@@ -49,8 +49,10 @@ class SerikatController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$dataProvider=new CActiveDataProvider('SerikatPerusahaan',array('criteria'=>array('condition'=>'serikat_id="'.$id.'"')));
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'dataProvider'=>$dataProvider,
 			));
 	}
 
@@ -168,4 +170,14 @@ class SerikatController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	public function actionPerusahaan()
+	{
+		$dataProvider=new CActiveDataProvider('Serikat');
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+			));
+	}
+
+
 }

@@ -50,18 +50,9 @@ class PerusahaanController extends Controller
 	 */
 	public function actionView($id)
 	{
-		if(Yii::app()->request->isAjaxRequest)
-		{
-			$this->renderPartial('view',array(
-				'model'=>$this->loadModel($id),
-				), false, true);
-		}
-		else
-		{
-			$this->render('view',array(
-				'model'=>$this->loadModel($id),
-				));
-		}
+		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+		));
 	}
 
 	/**
@@ -193,5 +184,5 @@ class PerusahaanController extends Controller
 		$model->status = 0;
 		$model->save();
 		$this->redirect(array('index'));
-	}			
+	}				
 }

@@ -7,24 +7,19 @@ $this->breadcrumbs=array(
 	);
 
 	$this->pageTitle='Daftar Kecamatan';
+	
+	$jumlah_kecamatan =  Yii::app()->db->createCommand("SELECT COUNT(id) FROM Kecamatan")->queryScalar();
+	$tidak_terdaftar =  Yii::app()->db->createCommand("SELECT COUNT(id) FROM perusahaan where kecamatan=''")->queryScalar();
+
 	?>
 
-	<section class="col-xs-12">
+	<div class="alert alert-warning">
+			Total Kecamatan di Kab. Bandung <b><?php echo $jumlah_kecamatan; ?></b> Wilayah, ada sekitar <b><?php echo $tidak_terdaftar; ?></b> Perusahaan tidak terdaftar.
+		</div>
 
-		<?php echo CHtml::link('Tambah Kecamatan',
- array('tambah'),
- array('class' => 'btn btn-success btn-flat'));
- ?>
-		<?php echo CHtml::link('Kelola Kecamatan',
- array('kelola'),
- array('class' => 'btn btn-success btn-flat'));
- ?>
-
-		<HR>
 
 			<?php $this->widget('zii.widgets.CListView', array(
 			'dataProvider'=>$dataProvider,
 			'itemView'=>'_view',
 			)); ?>
 
-		</section>

@@ -80,7 +80,12 @@
 
 				<div class="col-sm-8">
 					<?php echo $form->error($model,'kategori_id'); ?>
-					<?php echo $form->textField($model,'kategori_id',array('class'=>'form-control')); ?>
+					<?php echo $form->dropDownList($model, "kategori_id",
+						CHtml::listData(Industri::model()->findAll(array('condition'=>'','order'=>'nama ASC')),
+							'id', 'deskripsi'
+							),
+						array("empty"=>"-- Pilih Industri --", 'class'=>'form-control')
+						); ?> 
 				</div>
 
 			</div>  
@@ -94,7 +99,12 @@
 
 				<div class="col-sm-8">
 					<?php echo $form->error($model,'kecamatan_id'); ?>
-					<?php echo $form->textField($model,'kecamatan_id',array('class'=>'form-control')); ?>
+						<?php echo $form->dropDownList($model, "kecamatan_id",
+						CHtml::listData(Kecamatan::model()->findAll(array('condition'=>'','order'=>'nama ASC')),
+							'id', 'nama'
+							),
+						array("empty"=>"-- Pilih Kecamatan --", 'class'=>'form-control')
+						); ?> 
 				</div>
 
 			</div>  

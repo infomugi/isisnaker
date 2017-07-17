@@ -28,12 +28,12 @@ class IndustriController extends Controller
 	{
 		return array(
 			array('allow',
-				'actions'=>array('tambah','update','view','delete','kelola','daftar','view'),
+				'actions'=>array('tambah','update','view','delete','kelola','daftar','view','perusahaan'),
 				'users'=>array('@'),
 				'expression'=>'Yii::app()->user->getLevel()==1',
 				),
 			array('allow',
-				'actions'=>array('tambah','update','view','delete','kelola','daftar','view'),
+				'actions'=>array('tambah','update','view','delete','kelola','daftar','view','perusahaan'),
 				'users'=>array('@'),
 				'expression'=>'Yii::app()->user->getLevel()==2',
 				),			
@@ -49,8 +49,11 @@ class IndustriController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$model=Industri::model()->findByPk($id);
+		$dataProvider=new CActiveDataProvider('Perusahaan',array('criteria'=>array('condition'=>'jenis_usaha="'.$model->deskripsi.'"')));
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'dataProvider'=>$dataProvider,
 			));
 	}
 
@@ -167,5 +170,13 @@ class IndustriController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	public function actionPerusahaan()
+	{
+		$dataProvider=new CActiveDataProvider('Industri');
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+			));
 	}
 }

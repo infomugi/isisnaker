@@ -33,7 +33,7 @@ class KecamatanController extends Controller
 				'expression'=>'Yii::app()->user->getLevel()==1',
 				),
 			array('allow',
-				'actions'=>array('tambah','update','view','delete','kelola','daftar','view'),
+				'actions'=>array('kelola','daftar','view','perusahaan'),
 				'users'=>array('@'),
 				'expression'=>'Yii::app()->user->getLevel()==2',
 				),			
@@ -49,8 +49,11 @@ class KecamatanController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$model=Kecamatan::model()->findByPk($id);
+		$dataProvider=new CActiveDataProvider('Perusahaan',array('criteria'=>array('condition'=>'kecamatan="'.$model->nama.'"')));
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'dataProvider'=>$dataProvider,
 			));
 	}
 
@@ -168,4 +171,18 @@ class KecamatanController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	public function actionPerusahaan()
+	{
+		$dataProvider=new CActiveDataProvider('Kecamatan',array(
+			'criteria'=>array(
+				'order'=>'nama ASC'
+				),
+			'pagination'=>array(
+				'pageSize'=>'50',
+				)));
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+			));
+	}	
 }
