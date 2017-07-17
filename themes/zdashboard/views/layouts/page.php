@@ -7,7 +7,7 @@
 	<?php require_once('tpl_navigation.php');?>
 
 	<!-- Right side column. Contains the navbar and content of the page -->
-	<?php require_once('tpl_content_page.php');?>
+	<?php require_once('tpl_content.php');?>
 
 </div>
 

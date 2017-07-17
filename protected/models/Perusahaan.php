@@ -218,4 +218,15 @@ class Perusahaan extends CActiveRecord
 			return $data;
 		}
 	}
+
+	public function expire($date){
+		$tgl_sekarang = date("d-m-Y");
+		$tgl_expired = $date;
+		if($tgl_sekarang <= $tgl_expired )
+		{
+			return "Masih Berlaku";
+		}else{
+			return "Expire";
+		}
+	}
 }

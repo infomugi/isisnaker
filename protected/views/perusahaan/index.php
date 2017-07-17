@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Perusahaans',
+	'Perusahaan',
 	);
 
 $this->pageTitle='List Perusahaan';
@@ -40,13 +40,17 @@ $this->pageTitle='List Perusahaan';
 							array('admin'),
 							array('class' => 'btn btn-success btn-flat','title'=>'Manage Perusahaan'));
 							?>
+							<?php echo CHtml::link('Export ke Excel',
+								array('reportexcel'),
+								array('class' => 'btn btn-success btn-flat','title'=>'Export Perusahaan ke Excel'));
+								?>
 
-						</span>
+							</span>
 
-						<HR>
+							<HR>
 
-							<?php $this->widget('zii.widgets.CListView', array(
-								'dataProvider'=>$dataProvider,
-								'itemView'=>'_view',
-								)); ?>
+								<?php $this->widget('zii.widgets.CListView', array(
+									'dataProvider'=>$dataProvider,
+									'itemView'=>'_view',
+									)); ?>
 

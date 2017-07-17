@@ -37,7 +37,7 @@ class EExcelWriter extends CGridView{
         $this->headerFormat = $this->workBook->addformat();
         $this->headerFormat->set_bold();
         $this->headerFormat->set_size(11);
-        $this->headerFormat->set_border(0.5);
+        $this->headerFormat->set_border(0.2);
         $this->headerFormat->set_color('white');
         $this->headerFormat->set_bg_color('black');
         $this->headerFormat->set_align('center');
@@ -46,6 +46,7 @@ class EExcelWriter extends CGridView{
         $this->rowFormat = $this->workBook->addformat();
         $this->rowFormat->set_border(1);
         $this->rowFormat->set_align('left');
+        $this->rowFormat->set_text_wrap();
 
     }
 
@@ -63,7 +64,7 @@ class EExcelWriter extends CGridView{
                 else
                     $head = $column->name;
             } else
-                $head =trim($column->header)!=='' ? $column->header : $column->grid->blankDisplay;
+            $head =trim($column->header)!=='' ? $column->header : $column->grid->blankDisplay;
 
             $this->activeWorksheet->write( $this->currentRow , $this->currentCol, $head, $this->headerFormat);
             $this->columnLenghts[$this->currentCol] = strlen($head);
@@ -112,58 +113,58 @@ class EExcelWriter extends CGridView{
                     $value=$column->label;
             } elseif($column instanceof CButtonColumn)
                 $value = ""; //Dont know what to do with buttons
-            elseif($column->value!==null)
-                $value=$this->evaluateExpression($column->value ,array('data'=>$data[$row]));
-            elseif($column->name!==null) {
+                elseif($column->value!==null)
+                    $value=$this->evaluateExpression($column->value ,array('data'=>$data[$row]));
+                elseif($column->name!==null) {
                 //$value=$data[$row][$column->name];
-                $value= CHtml::value($data[$row], $column->name);
-                $value=$value===null ? "" : $column->grid->getFormatter()->format($value,'raw');
-            }
+                    $value= CHtml::value($data[$row], $column->name);
+                    $value=$value===null ? "" : $column->grid->getFormatter()->format($value,'raw');
+                }
 
-            if(strpos($value, "$") !== FALSE) {
-                $value = str_replace("$", "", $value);
+                if(strpos($value, "$") !== FALSE) {
+                    $value = str_replace("$", "", $value);
+                }
+                $this->activeWorksheet->write( $this->currentRow , $this->currentCol, $value, $this->rowFormat);
+                if( $this->columnLenghts[$this->currentCol] < strlen($value)){
+                    $this->columnLenghts[$this->currentCol] = strlen($value);
+                }
+                $this->currentCol++;
             }
-            $this->activeWorksheet->write( $this->currentRow , $this->currentCol, $value, $this->rowFormat);
-            if( $this->columnLenghts[$this->currentCol] < strlen($value)){
-                $this->columnLenghts[$this->currentCol] = strlen($value);
-            }
-            $this->currentCol++;
+            $this->currentRow++;
         }
-        $this->currentRow++;
-    }
 
-    public function renderFooter($row)
-    {
-        $a=0;
-        foreach($this->columns as $n=>$column)
+        public function renderFooter($row)
         {
-            $a=$a+1;
-            if($column->footer)
+            $a=0;
+            foreach($this->columns as $n=>$column)
             {
-                $footer =trim($column->footer)!=='' ? $column->footer : $column->grid->blankDisplay;
+                $a=$a+1;
+                if($column->footer)
+                {
+                    $footer =trim($column->footer)!=='' ? $column->footer : $column->grid->blankDisplay;
 
-                $cell = $this->objPHPExcel->getActiveSheet()->setCellValue($this->columnName($a).($row+2) ,$footer, true);
-                if(is_callable($this->onRenderFooterCell))
-                    call_user_func_array($this->onRenderFooterCell, array($cell, $footer));
+                    $cell = $this->objPHPExcel->getActiveSheet()->setCellValue($this->columnName($a).($row+2) ,$footer, true);
+                    if(is_callable($this->onRenderFooterCell))
+                        call_user_func_array($this->onRenderFooterCell, array($cell, $footer));
+                }
             }
         }
-    }
 
-    public function autofitColumns(){
-        foreach( $this->columnLenghts as $col => $length ){
-            $width = 1.1 * $length;
-            $this->activeWorksheet->set_column($col, $col, $width);
+        public function autofitColumns(){
+            foreach( $this->columnLenghts as $col => $length ){
+                $width = 1.1 * $length;
+                $this->activeWorksheet->set_column($col, $col, $width);
+            }
+
         }
 
-    }
 
+        public function run(){
 
-    public function run(){
-
-        $this->renderHeader();
-        $this->renderBody();
-        $this->autofitColumns();
-        $this->workBook->close();
+            $this->renderHeader();
+            $this->renderBody();
+            $this->autofitColumns();
+            $this->workBook->close();
         if($this->stream){ //output to browser
             header("Content-Type: application/x-msexcel; name=\"".basename($this->fileName)."\"");
             header("Content-Disposition: inline; filename=\"".basename($this->fileName)."\"");

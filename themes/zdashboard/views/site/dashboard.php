@@ -38,50 +38,67 @@ $sangatkecil =  Yii::app()->db->createCommand("SELECT count(id) FROM perusahaan 
 
 ?>
 
-<div class="col-md-12">
-	<div class="panel panel-default panel-stats">
-		<div class="panel-heading">
-		<h3 class="panel-title">Statistik Ketenagakerjaan di Kab. Bandung</h3>
+<div class="col-md-6">
+	<div class="panel panel-default panel-color panel-color-belize panel-stats panel-stats-icon">
+		<div class="panel-heading panel-icon-title clearfix">
+			<span class="pull-left">
+				<i class="fa fa-users"></i>
+			</span>
+			<h3 class="panel-title">Ketenagakerjaan & Organisasi</h3>
 		</div>
 		<div class="panel-body no-padding">
 			<div class="row">
-				<div class="col-md-3 col-sm-3 col-xs-6">
+				<div class="col-md-6 col-sm-6">
 					<div class="panel-data">
-						<?php echo $total_pekerja_wni; ?>
+						<i class="fa fa-user"></i> <?php echo $total_pekerja_wni; ?>
 						<span>Total Pekerja</span>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6">
+				<div class="col-md-6 col-sm-6">
 					<div class="panel-data">
-						<?php echo $total_serikat; ?>
+						<i class="fa fa-archive"></i> <?php echo $total_serikat; ?>
 						<span>Total Organisasi Serikat</span>
-					</div>
-				</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
-					<div class="panel-data">
-						<?php echo $total_perusahaan; ?>
-						<span>Total Perusahaan</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6">
-					<div class="panel-data">
-						<?php echo $total_sektor; ?>
-						<span>Total Industri</span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="panel-footer clearfix">
+	</div>
+</div>
+
+<div class="col-md-6">
+
+	<div class="panel panel-succe panel-color panel-color-peterriver panel-stats panel-stats-icon">
+		<div class="panel-heading panel-icon-title clearfix">
 			<span class="pull-left">
-				Update Terakhir: <?php echo date('d-m-Y'); ?>
+				<i class="fa fa-building-o"></i>
 			</span>
+			<h3 class="panel-title">Perusahaan & Industri</h3>
+		</div>
+		<div class="panel-body no-padding">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="panel-data">
+						<i class="fa fa-file-text"></i> <?php echo $total_perusahaan; ?>
+						<span>Total Perusahaan</span>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="panel-data">
+						<i class="fa fa-globe"></i> <?php echo $total_sektor; ?>
+						<span>Total Sektor Industri</span>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
+</div>
+
+<div class="col-md-6">
 
 
 	<div class="panel panel-default panel-stats">
 		<div class="panel-heading">
-		<h3 class="panel-title">Laporan Tenaga Kerja di Kab. Bandung</h3>
+			<h3 class="panel-title">Laporan Tenaga Kerja di Kab. Bandung</h3>
 		</div>
 		<div class="panel-body no-padding">
 			<div class="row">
@@ -97,7 +114,7 @@ $sangatkecil =  Yii::app()->db->createCommand("SELECT count(id) FROM perusahaan 
 						<span>TKI Pria</span>
 					</div>
 				</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
+				<div class="col-md-3 col-sm-3 col-xs-6">
 					<div class="panel-data">
 						<?php echo $jumlah_tka_wanita; ?>
 						<span>TKA Wanita</span>
@@ -116,16 +133,16 @@ $sangatkecil =  Yii::app()->db->createCommand("SELECT count(id) FROM perusahaan 
 				<div class="col-md-3 col-sm-3 col-xs-6">
 					<div class="panel-data">
 						<?php echo $bpjs_ketenagakerjaan_wanita; ?>
-						<span>BPJS Ketenagakerjaan Wanita</span>
+						<span>BPJS Tenaga Kerja Wanita</span>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-6">
 					<div class="panel-data">
 						<?php echo $bpjs_ketenagakerjaan_pria; ?>
-						<span>BPJS Ketenagakerjaan Pria</span>
+						<span>BPJS Tenaga Kerja Pria</span>
 					</div>
 				</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
+				<div class="col-md-3 col-sm-3 col-xs-6">
 					<div class="panel-data">
 						<?php echo $bpjs_kesehatan_wanita; ?>
 						<span>BPJS Kesehatan Wanita</span>
@@ -145,11 +162,15 @@ $sangatkecil =  Yii::app()->db->createCommand("SELECT count(id) FROM perusahaan 
 			</span>
 		</div>
 	</div>
+</div>
+
+<div class="col-md-6">
+
 
 
 	<div class="panel panel-default panel-stats">
 		<div class="panel-heading">
-		<h3 class="panel-title">Jenis Pemodalan Perusahaan di Kab. Bandung</h3>
+			<h3 class="panel-title">Jenis Pemodalan Perusahaan di Kab. Bandung</h3>
 		</div>
 		<div class="panel-body no-padding">
 			<div class="row">
@@ -165,7 +186,7 @@ $sangatkecil =  Yii::app()->db->createCommand("SELECT count(id) FROM perusahaan 
 						<span>PMDN</span>
 					</div>
 				</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
+				<div class="col-md-3 col-sm-3 col-xs-6">
 					<div class="panel-data">
 						<?php echo $pma; ?>
 						<span>PMA</span>
@@ -193,7 +214,7 @@ $sangatkecil =  Yii::app()->db->createCommand("SELECT count(id) FROM perusahaan 
 						<span>Koperasi</span>
 					</div>
 				</div>
-					<div class="col-md-4 col-sm-4 col-xs-6">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="panel-data">
 						<?php echo $joinventure; ?>
 						<span>Join Venture</span>
@@ -207,11 +228,12 @@ $sangatkecil =  Yii::app()->db->createCommand("SELECT count(id) FROM perusahaan 
 			</span>
 		</div>
 	</div>
+</div>
 
-
-		<div class="panel panel-default panel-stats">
+<div class="col-md-12">
+	<div class="panel panel-default panel-stats">
 		<div class="panel-heading">
-		<h3 class="panel-title">Klasifikasi Perusahaan di Kab. Bandung</h3>
+			<h3 class="panel-title">Klasifikasi Perusahaan di Kab. Bandung</h3>
 		</div>
 		<div class="panel-body no-padding">
 			<div class="row">
@@ -256,5 +278,4 @@ $sangatkecil =  Yii::app()->db->createCommand("SELECT count(id) FROM perusahaan 
 			</span>
 		</div>
 	</div>
-
 </div>

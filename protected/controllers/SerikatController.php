@@ -173,7 +173,14 @@ class SerikatController extends Controller
 
 	public function actionPerusahaan()
 	{
-		$dataProvider=new CActiveDataProvider('Serikat');
+		$this->layout = "page";
+		$dataProvider=new CActiveDataProvider('Serikat',array(
+			'criteria'=>array(
+				'order'=>'nama ASC'
+				),
+			'pagination'=>array(
+				'pageSize'=>'50',
+				)));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 			));

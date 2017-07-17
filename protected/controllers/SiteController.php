@@ -32,7 +32,7 @@ class SiteController extends Controller
 			$this->actionLogin();
 		}else{
 			
-
+			$this->layout = "page";
 			$dataProvider=new CActiveDataProvider('Kecamatan',array(
 				'criteria'=>array(
 					'order'=>'nama ASC'
@@ -108,15 +108,16 @@ class SiteController extends Controller
 			if($model->validate() && $model->login()){
 				//$userid,$description,$activityid,$type,$point,$status
 				Activities::model()->my(YII::app()->user->id,"Login dari IP : ".Yii::app()->request->getUserHostAddress(),1,1,3,0);
-			if(Yii::app()->user->getLevel()==1){
-				Yii::app()->user->setFlash('Success', 'Berhasil login dari IP '.Yii::app()->request->getUserHostAddress().'');
-				$this->redirect(Yii::app()->user->returnUrl);
-			}else if(Yii::app()->user->getLevel()==2){
-				Yii::app()->user->setFlash('success', 'Berhasil login dari IP '.Yii::app()->request->getUserHostAddress().'. - Login Terakhir : '.YII::app()->user->record->last_login);
-				$this->redirect('index.php?r=user/view&id='.YII::app()->user->id);
-			}else{
-				$this->redirect('index.php?r=site/login');
-			}
+				if(Yii::app()->user->getLevel()==1){
+					Yii::app()->user->setFlash('Success', 'Berhasil login dari IP '.Yii::app()->request->getUserHostAddress().'');
+					$this->redirect(Yii::app()->user->returnUrl);
+				}else if(Yii::app()->user->getLevel()==2){
+					Yii::app()->user->setFlash('success', 'Berhasil login dari IP '.Yii::app()->request->getUserHostAddress().'. - Login Terakhir : '.YII::app()->user->record->last_login);
+					$this->redirect(Yii::app()->user->returnUrl);
+					// $this->redirect('index.php?r=user/view&id='.YII::app()->user->id);
+				}else{
+					$this->redirect('index.php?r=site/login');
+				}
 			}
 		}
 		// display the login form

@@ -174,7 +174,13 @@ class IndustriController extends Controller
 
 	public function actionPerusahaan()
 	{
-		$dataProvider=new CActiveDataProvider('Industri');
+		$dataProvider=new CActiveDataProvider('Industri',array(
+			'criteria'=>array(
+				'order'=>'nama ASC'
+				),
+			'pagination'=>array(
+				'pageSize'=>'100',
+				)));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 			));

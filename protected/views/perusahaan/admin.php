@@ -3,7 +3,7 @@
 /* @var $model Perusahaan */
 
 $this->breadcrumbs=array(
-	'Perusahaans'=>array('index'),
+	'Perusahaan'=>array('daftar'),
 	'Manage',
 	);
 
@@ -33,31 +33,35 @@ $this->pageTitle='Manage Perusahaan';
 					array('index'),
 					array('class' => 'btn btn-success btn-flat'));
 					?>
+					<?php echo CHtml::link('Export ke Excel',
+						array('reportexcel'),
+						array('class' => 'btn btn-success btn-flat','title'=>'Export Perusahaan ke Excel'));
+						?>
 
-				</span>	
+					</span>	
 
-				<HR>
+					<HR>
 
-					<?php $this->widget('zii.widgets.grid.CGridView', array(
-						'id'=>'perusahaan-grid',
-						'dataProvider'=>$model->search(),
-						'filter'=>$model,
-						'itemsCssClass' => 'table-responsive table table-striped table-hover table-vcenter',
-						'columns'=>array(
+						<?php $this->widget('zii.widgets.grid.CGridView', array(
+							'id'=>'perusahaan-grid',
+							'dataProvider'=>$model->search(),
+							'filter'=>$model,
+							'itemsCssClass' => 'table-responsive table table-striped table-hover table-vcenter',
+							'columns'=>array(
 
-							array(
-								'header'=>'No',
-								'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',
-								'htmlOptions'=>array('width'=>'10px', 
-									'style' => 'text-align: center;')),
+								array(
+									'header'=>'No',
+									'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1',
+									'htmlOptions'=>array('width'=>'10px', 
+										'style' => 'text-align: center;')),
 
-							'klui',
-							'nama',
-							'alamat',
-							'kecamatan',
-							'jenis_pemodalan',
-							'klasifikasi',
-							
+								'klui',
+								'nama',
+								'alamat',
+								'kecamatan',
+								'jenis_pemodalan',
+								'klasifikasi',
+
 							// 'id',
 							// 'jenis_usaha',
 							// 'pimpinan',
@@ -86,42 +90,42 @@ $this->pageTitle='Manage Perusahaan';
 							// 'kopkar_tidak_badan_hukum',
 							// 'keterangan',
 							// 'status',
-							
-							array(
-								'class'=>'CButtonColumn',
-								'template'=>'{view}',
-								'buttons'=>array(
-									'view'=>
-									array(
-										'url'=>'Yii::app()->createUrl("Perusahaan/view", array("id"=>$data->id))',
+
+								array(
+									'class'=>'CButtonColumn',
+									'template'=>'{view}',
+									'buttons'=>array(
+										'view'=>
+										array(
+											'url'=>'Yii::app()->createUrl("Perusahaan/view", array("id"=>$data->id))',
+											),
 										),
 									),
 								),
-							),
-							)); ?>
+								)); ?>
 
 
 
-							<!-- Modal -->
-							<div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<!-- Popup Header -->
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h5 class="modal-title"><strong>Detail</strong> Perusahaan</h5>
-										</div>
-										<!-- Popup Content -->
-										<div class="modal-body">
-											<p>Details</p>
-										</div>
-										<!-- Popup Footer -->
-										<div class="modal-footer">
-											<BR>
-												<button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+								<!-- Modal -->
+								<div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<!-- Popup Header -->
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h5 class="modal-title"><strong>Detail</strong> Perusahaan</h5>
+											</div>
+											<!-- Popup Content -->
+											<div class="modal-body">
+												<p>Details</p>
+											</div>
+											<!-- Popup Footer -->
+											<div class="modal-footer">
+												<BR>
+													<button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
 
 

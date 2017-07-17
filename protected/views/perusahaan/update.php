@@ -3,7 +3,7 @@
 /* @var $model Perusahaan */
 
 $this->breadcrumbs=array(
-	'Perusahaans'=>array('index'),
+	'Perusahaan'=>array('daftar'),
 	$model->id=>array('view','id'=>$model->id),
 	'Edit',
 	);

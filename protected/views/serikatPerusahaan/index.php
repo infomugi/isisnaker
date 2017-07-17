@@ -1,21 +1,21 @@
 <?php
-/* @var $this SerikatPerusahaanController */
+/* @var $this Serikat PerusahaanController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Serikat Perusahaans',
+	'Serikat Perusahaan',
 	);
 
-	$this->pageTitle='Daftar SerikatPerusahaan';
+	$this->pageTitle='Daftar Serikat Perusahaan';
 	?>
 
 	<section class="col-xs-12">
 
-		<?php echo CHtml::link('Tambah SerikatPerusahaan',
+		<?php echo CHtml::link('Tambah Serikat Perusahaan',
  array('tambah'),
  array('class' => 'btn btn-success btn-flat'));
  ?>
-		<?php echo CHtml::link('Kelola SerikatPerusahaan',
+		<?php echo CHtml::link('Kelola Serikat Perusahaan',
  array('kelola'),
  array('class' => 'btn btn-success btn-flat'));
  ?>

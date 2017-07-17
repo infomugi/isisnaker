@@ -1,14 +1,14 @@
 <?php
-/* @var $this SerikatPerusahaanController */
-/* @var $model SerikatPerusahaan */
+/* @var $this Serikat PerusahaanController */
+/* @var $model Serikat Perusahaan */
 
 $this->breadcrumbs=array(
-	'Serikat Perusahaans'=>array('index'),
+	'Serikat Perusahaan'=>array('index'),
 	$model->id_serikat_perusahaan=>array('view','id'=>$model->id_serikat_perusahaan),
 	'Update',
 	);
 
-	$this->pageTitle='Edit SerikatPerusahaan';
-	?>
+$this->pageTitle='Edit Serikat Perusahaan';
+?>
 
-	<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

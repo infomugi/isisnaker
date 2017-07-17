@@ -33,7 +33,7 @@ class PerusahaanController extends Controller
 				'expression'=>'Yii::app()->user->getLevel()==1',
 				),
 			array('allow',
-				'actions'=>array('create','update','view','delete','admin','index','changeimage','enable','disable'),
+				'actions'=>array('create','update','view','delete','admin','index','changeimage','enable','disable','report','reportnot','reportexcel'),
 				'users'=>array('@'),
 				'expression'=>'Yii::app()->user->getLevel()==2',
 				),		
@@ -52,7 +52,7 @@ class PerusahaanController extends Controller
 	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
-		));
+			));
 	}
 
 	/**
@@ -184,5 +184,94 @@ class PerusahaanController extends Controller
 		$model->status = 0;
 		$model->save();
 		$this->redirect(array('index'));
-	}				
+	}
+
+	public function actionReport($kriteria,$search)
+	{
+		$dataProvider=new CActiveDataProvider('Perusahaan',array(
+			'criteria'=>array(
+				'condition'=>''.$kriteria.'='.$search.'',
+				'order'=>'nama ASC'
+				),
+			'pagination'=>array(
+				'pageSize'=>'100',
+				)));
+
+		if($kriteria=="perusahaan_nomor_sk"){
+
+			$this->render('report_sk',array(
+				'dataProvider'=>$dataProvider,
+				));
+
+		}else if($kriteria=="serikat_nama"){
+
+			$this->render('report_serikat',array(
+				'dataProvider'=>$dataProvider,
+				));
+
+		}else if($kriteria=="bipartit_nomor"){
+
+			$this->render('report_bipartit',array(
+				'dataProvider'=>$dataProvider,
+				));
+
+		}else{
+
+			$this->render('report_pimpinan',array(
+				'dataProvider'=>$dataProvider,
+				));
+
+		}
+	}	
+
+	public function actionReportNot($kriteria,$search)
+	{
+		$dataProvider=new CActiveDataProvider('Perusahaan',array(
+			'criteria'=>array(
+				'condition'=>''.$kriteria.'!='.$search.'',
+				'order'=>'nama ASC'
+				),
+			'pagination'=>array(
+				'pageSize'=>'100',
+				)));
+
+		if($kriteria=="perusahaan_nomor_sk"){
+
+			$this->render('report_sk',array(
+				'dataProvider'=>$dataProvider,
+				));
+
+		}else if($kriteria=="serikat_nama"){
+
+			$this->render('report_serikat',array(
+				'dataProvider'=>$dataProvider,
+				));
+
+		}else if($kriteria=="bipartit_nomor"){
+
+			$this->render('report_bipartit',array(
+				'dataProvider'=>$dataProvider,
+				));
+
+		}else{
+
+			$this->render('report_pimpinan',array(
+				'dataProvider'=>$dataProvider,
+				));
+
+		}
+
+
+
+
+	}			
+
+
+	public function actionReportExcel()
+	{
+		$dataProvider=new CActiveDataProvider('Perusahaan');
+		$this->render('report_excel',array(
+			'dataProvider'=>$dataProvider,
+			));
+	}			
 }

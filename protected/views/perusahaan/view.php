@@ -3,7 +3,7 @@
 /* @var $model Perusahaan */
 
 $this->breadcrumbs=array(
-	'Perusahaans'=>array('index'),
+	'Perusahaan'=>array('daftar'),
 	$model->id,
 	);
 
@@ -134,9 +134,7 @@ $this->pageTitle='Detail Perusahaan';
 																									'bpjs_ketenagakerjaan_pria',
 																									'bpjs_kesehatan_wanita',
 																									'bpjs_kesehatan_pria',
-																									'kopkar_badan_hukum',
-																									'kopkar_tidak_badan_hukum',
-																									'keterangan',
+																									
 																									),
 																									)); ?>
 

@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Kecamatans',
+	'Kecamatan',
 	);
 
 	$this->pageTitle='Daftar Kecamatan';

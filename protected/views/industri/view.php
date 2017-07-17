@@ -3,7 +3,7 @@
 /* @var $model Industri */
 
 $this->breadcrumbs=array(
-	'Industri'=>array('index'),
+	'Industri'=>array('daftar'),
 	$model->deskripsi,
 	);
 

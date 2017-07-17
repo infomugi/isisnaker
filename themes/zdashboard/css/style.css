@@ -1,11 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Karla:400,400italic,700italic,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700);
 
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
 /*
   Author: Zul Azman
   Website: http://zulazman.com
   Email: zul@zulazman.com
-*/
+  */
 /* Imports
 ---------------------------*/
 /* Variables ---------------------------*//* Fonts
@@ -80,8 +80,8 @@
  * Copyright 2013 bootstrap-select
  * Licensed under the MIT license
  */
-.bootstrap-select.btn-group,
-.bootstrap-select.btn-group[class*="span"] {
+ .bootstrap-select.btn-group,
+ .bootstrap-select.btn-group[class*="span"] {
   float: none;
   display: inline-block;
   margin-bottom: 10px;
@@ -319,7 +319,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ========================================================== */
-.bootstrap-checkbox > button.btn {
+ .bootstrap-checkbox > button.btn {
   padding: 7px 0 4px 2px;
   width: 28px;
 }
@@ -472,362 +472,362 @@ Version: 3.5.2 Timestamp: Sat Nov  1 14:43:36 EDT 2014
     Force border-box so that % widths fit the parent
     container without overlap because of margin/padding.
     More Info : http://www.quirksmode.org/css/box.html
-  */
+    */
 
-  -webkit-box-sizing: border-box;
-  /* webkit */
+    -webkit-box-sizing: border-box;
+    /* webkit */
 
-  -moz-box-sizing: border-box;
-  /* firefox */
+    -moz-box-sizing: border-box;
+    /* firefox */
 
-  box-sizing: border-box;
-  /* css3 */
+    box-sizing: border-box;
+    /* css3 */
 
-}
-.select2-container .select2-choice {
-  display: block;
-  height: 26px;
-  padding: 0 0 0 8px;
-  overflow: hidden;
-  position: relative;
-  border: 1px solid #aaa;
-  white-space: nowrap;
-  line-height: 26px;
-  color: #444;
-  text-decoration: none;
-  border-radius: 4px;
-  background-clip: padding-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: #fff;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.5, #ffffff));
-  background-image: -webkit-linear-gradient(center bottom, #eeeeee 0%, #ffffff 50%);
-  background-image: -moz-linear-gradient(center bottom, #eeeeee 0%, #ffffff 50%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
-  background-image: linear-gradient(to top, #eeeeee 0%, #ffffff 50%);
-}
-html[dir="rtl"] .select2-container .select2-choice {
-  padding: 0 8px 0 0;
-}
-.select2-container.select2-drop-above .select2-choice {
-  border-bottom-color: #aaa;
-  border-radius: 0 0 4px 4px;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.9, #ffffff));
-  background-image: -webkit-linear-gradient(center bottom, #eeeeee 0%, #ffffff 90%);
-  background-image: -moz-linear-gradient(center bottom, #eeeeee 0%, #ffffff 90%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
-  background-image: linear-gradient(to bottom, #eeeeee 0%, #ffffff 90%);
-}
-.select2-container.select2-allowclear .select2-choice .select2-chosen {
-  margin-right: 42px;
-}
-.select2-container .select2-choice > .select2-chosen {
-  margin-right: 26px;
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  float: none;
-  width: auto;
-}
-html[dir="rtl"] .select2-container .select2-choice > .select2-chosen {
-  margin-left: 26px;
-  margin-right: 0;
-}
-.select2-container .select2-choice abbr {
-  display: none;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 24px;
-  top: 8px;
-  font-size: 1px;
-  text-decoration: none;
-  border: 0;
-  background: url('select2.png') right top no-repeat;
-  cursor: pointer;
-  outline: 0;
-}
-.select2-container.select2-allowclear .select2-choice abbr {
-  display: inline-block;
-}
-.select2-container .select2-choice abbr:hover {
-  background-position: right -11px;
-  cursor: pointer;
-}
-.select2-drop-mask {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  left: 0;
-  top: 0;
-  min-height: 100%;
-  min-width: 100%;
-  height: auto;
-  width: auto;
-  opacity: 0;
-  z-index: 9998;
-  /* styles required for IE to work */
+  }
+  .select2-container .select2-choice {
+    display: block;
+    height: 26px;
+    padding: 0 0 0 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #aaa;
+    white-space: nowrap;
+    line-height: 26px;
+    color: #444;
+    text-decoration: none;
+    border-radius: 4px;
+    background-clip: padding-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #fff;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.5, #ffffff));
+    background-image: -webkit-linear-gradient(center bottom, #eeeeee 0%, #ffffff 50%);
+    background-image: -moz-linear-gradient(center bottom, #eeeeee 0%, #ffffff 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+    background-image: linear-gradient(to top, #eeeeee 0%, #ffffff 50%);
+  }
+  html[dir="rtl"] .select2-container .select2-choice {
+    padding: 0 8px 0 0;
+  }
+  .select2-container.select2-drop-above .select2-choice {
+    border-bottom-color: #aaa;
+    border-radius: 0 0 4px 4px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.9, #ffffff));
+    background-image: -webkit-linear-gradient(center bottom, #eeeeee 0%, #ffffff 90%);
+    background-image: -moz-linear-gradient(center bottom, #eeeeee 0%, #ffffff 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+    background-image: linear-gradient(to bottom, #eeeeee 0%, #ffffff 90%);
+  }
+  .select2-container.select2-allowclear .select2-choice .select2-chosen {
+    margin-right: 42px;
+  }
+  .select2-container .select2-choice > .select2-chosen {
+    margin-right: 26px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: none;
+    width: auto;
+  }
+  html[dir="rtl"] .select2-container .select2-choice > .select2-chosen {
+    margin-left: 26px;
+    margin-right: 0;
+  }
+  .select2-container .select2-choice abbr {
+    display: none;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 24px;
+    top: 8px;
+    font-size: 1px;
+    text-decoration: none;
+    border: 0;
+    background: url('select2.png') right top no-repeat;
+    cursor: pointer;
+    outline: 0;
+  }
+  .select2-container.select2-allowclear .select2-choice abbr {
+    display: inline-block;
+  }
+  .select2-container .select2-choice abbr:hover {
+    background-position: right -11px;
+    cursor: pointer;
+  }
+  .select2-drop-mask {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    z-index: 9998;
+    /* styles required for IE to work */
 
-  background-color: #fff;
-  filter: alpha(opacity=0);
-}
-.select2-drop {
-  width: 100%;
-  margin-top: -1px;
-  position: absolute;
-  z-index: 9999;
-  top: 100%;
-  background: #fff;
-  color: #000;
-  border: 1px solid #aaa;
-  border-top: 0;
-  border-radius: 0 0 4px 4px;
-  -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
-}
-.select2-drop.select2-drop-above {
-  margin-top: 1px;
-  border-top: 1px solid #aaa;
-  border-bottom: 0;
-  border-radius: 4px 4px 0 0;
-  -webkit-box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.15);
-}
-.select2-drop-active {
-  border: 1px solid #5897fb;
-  border-top: none;
-}
-.select2-drop.select2-drop-above.select2-drop-active {
-  border-top: 1px solid #5897fb;
-}
-.select2-drop-auto-width {
-  border-top: 1px solid #aaa;
-  width: auto;
-}
-.select2-drop-auto-width .select2-search {
-  padding-top: 4px;
-}
-.select2-container .select2-choice .select2-arrow {
-  display: inline-block;
-  width: 18px;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  border-left: 1px solid #aaa;
-  border-radius: 0 4px 4px 0;
-  background-clip: padding-box;
-  background: #ccc;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #cccccc), color-stop(0.6, #eeeeee));
-  background-image: -webkit-linear-gradient(center bottom, #cccccc 0%, #eeeeee 60%);
-  background-image: -moz-linear-gradient(center bottom, #cccccc 0%, #eeeeee 60%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc', GradientType=0);
-  background-image: linear-gradient(to top, #cccccc 0%, #eeeeee 60%);
-}
-html[dir="rtl"] .select2-container .select2-choice .select2-arrow {
-  left: 0;
-  right: auto;
-  border-left: none;
-  border-right: 1px solid #aaa;
-  border-radius: 4px 0 0 4px;
-}
-.select2-container .select2-choice .select2-arrow b {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url('select2.png') no-repeat 0 1px;
-}
-html[dir="rtl"] .select2-container .select2-choice .select2-arrow b {
-  background-position: 2px 1px;
-}
-.select2-search {
-  display: inline-block;
-  width: 100%;
-  min-height: 26px;
-  margin: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-  position: relative;
-  z-index: 10000;
-  white-space: nowrap;
-}
-.select2-search input {
-  width: 100%;
-  height: auto !important;
-  min-height: 26px;
-  padding: 4px 20px 4px 5px;
-  margin: 0;
-  outline: 0;
-  font-family: sans-serif;
-  font-size: 1em;
-  border: 1px solid #aaa;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background: #ffffff url('select2.png') no-repeat 100% -22px;
-  background: url('select2.png') no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #ffffff), color-stop(0.99, #eeeeee));
-  background: url('select2.png') no-repeat 100% -22px, -webkit-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
-  background: url('select2.png') no-repeat 100% -22px, -moz-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
-  background: url('select2.png') no-repeat 100% -22px, linear-gradient(to bottom, #ffffff 85%, #eeeeee 99%) 0 0;
-}
-html[dir="rtl"] .select2-search input {
-  padding: 4px 5px 4px 20px;
-  background: #ffffff url('select2.png') no-repeat -37px -22px;
-  background: url('select2.png') no-repeat -37px -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #ffffff), color-stop(0.99, #eeeeee));
-  background: url('select2.png') no-repeat -37px -22px, -webkit-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
-  background: url('select2.png') no-repeat -37px -22px, -moz-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
-  background: url('select2.png') no-repeat -37px -22px, linear-gradient(to bottom, #ffffff 85%, #eeeeee 99%) 0 0;
-}
-.select2-drop.select2-drop-above .select2-search input {
-  margin-top: 4px;
-}
-.select2-search input.select2-active {
-  background: #ffffff url('select2-spinner.gif') no-repeat 100%;
-  background: url('select2-spinner.gif') no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #ffffff), color-stop(0.99, #eeeeee));
-  background: url('select2-spinner.gif') no-repeat 100%, -webkit-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
-  background: url('select2-spinner.gif') no-repeat 100%, -moz-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
-  background: url('select2-spinner.gif') no-repeat 100%, linear-gradient(to bottom, #ffffff 85%, #eeeeee 99%) 0 0;
-}
-.select2-container-active .select2-choice,
-.select2-container-active .select2-choices {
-  border: 1px solid #5897fb;
-  outline: none;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-.select2-dropdown-open .select2-choice {
-  border-bottom-color: transparent;
-  -webkit-box-shadow: 0 1px 0 #fff inset;
-  box-shadow: 0 1px 0 #fff inset;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  background-color: #eee;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ffffff), color-stop(0.5, #eeeeee));
-  background-image: -webkit-linear-gradient(center bottom, #ffffff 0%, #eeeeee 50%);
-  background-image: -moz-linear-gradient(center bottom, #ffffff 0%, #eeeeee 50%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
-  background-image: linear-gradient(to top, #ffffff 0%, #eeeeee 50%);
-}
-.select2-dropdown-open.select2-drop-above .select2-choice,
-.select2-dropdown-open.select2-drop-above .select2-choices {
-  border: 1px solid #5897fb;
-  border-top-color: transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(0.5, #eeeeee));
-  background-image: -webkit-linear-gradient(center top, #ffffff 0%, #eeeeee 50%);
-  background-image: -moz-linear-gradient(center top, #ffffff 0%, #eeeeee 50%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
-  background-image: linear-gradient(to bottom, #ffffff 0%, #eeeeee 50%);
-}
-.select2-dropdown-open .select2-choice .select2-arrow {
-  background: transparent;
-  border-left: none;
-  filter: none;
-}
-html[dir="rtl"] .select2-dropdown-open .select2-choice .select2-arrow {
-  border-right: none;
-}
-.select2-dropdown-open .select2-choice .select2-arrow b {
-  background-position: -18px 1px;
-}
-html[dir="rtl"] .select2-dropdown-open .select2-choice .select2-arrow b {
-  background-position: -16px 1px;
-}
-.select2-hidden-accessible {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-/* results */
-.select2-results {
-  max-height: 200px;
-  padding: 0 0 0 4px;
-  margin: 4px 4px 4px 0;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-html[dir="rtl"] .select2-results {
-  padding: 0 4px 0 0;
-  margin: 4px 0 4px 4px;
-}
-.select2-results ul.select2-result-sub {
-  margin: 0;
-  padding-left: 0;
-}
-.select2-results li {
-  list-style: none;
-  display: list-item;
-  background-image: none;
-}
-.select2-results li.select2-result-with-children > .select2-result-label {
-  font-weight: bold;
-}
-.select2-results .select2-result-label {
-  padding: 3px 7px 4px;
-  margin: 0;
-  cursor: pointer;
-  min-height: 1em;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.select2-results-dept-1 .select2-result-label {
-  padding-left: 20px;
-}
-.select2-results-dept-2 .select2-result-label {
-  padding-left: 40px;
-}
-.select2-results-dept-3 .select2-result-label {
-  padding-left: 60px;
-}
-.select2-results-dept-4 .select2-result-label {
-  padding-left: 80px;
-}
-.select2-results-dept-5 .select2-result-label {
-  padding-left: 100px;
-}
-.select2-results-dept-6 .select2-result-label {
-  padding-left: 110px;
-}
-.select2-results-dept-7 .select2-result-label {
-  padding-left: 120px;
-}
-.select2-results .select2-highlighted {
-  background: #3875d7;
-  color: #fff;
-}
-.select2-results li em {
-  background: #feffde;
-  font-style: normal;
-}
-.select2-results .select2-highlighted em {
-  background: transparent;
-}
-.select2-results .select2-highlighted ul {
-  background: #fff;
-  color: #000;
-}
-.select2-results .select2-no-results,
-.select2-results .select2-searching,
-.select2-results .select2-ajax-error,
-.select2-results .select2-selection-limit {
-  background: #f4f4f4;
-  display: list-item;
-  padding-left: 5px;
-}
+    background-color: #fff;
+    filter: alpha(opacity=0);
+  }
+  .select2-drop {
+    width: 100%;
+    margin-top: -1px;
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
+    background: #fff;
+    color: #000;
+    border: 1px solid #aaa;
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+    -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+  }
+  .select2-drop.select2-drop-above {
+    margin-top: 1px;
+    border-top: 1px solid #aaa;
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.15);
+  }
+  .select2-drop-active {
+    border: 1px solid #5897fb;
+    border-top: none;
+  }
+  .select2-drop.select2-drop-above.select2-drop-active {
+    border-top: 1px solid #5897fb;
+  }
+  .select2-drop-auto-width {
+    border-top: 1px solid #aaa;
+    width: auto;
+  }
+  .select2-drop-auto-width .select2-search {
+    padding-top: 4px;
+  }
+  .select2-container .select2-choice .select2-arrow {
+    display: inline-block;
+    width: 18px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: 1px solid #aaa;
+    border-radius: 0 4px 4px 0;
+    background-clip: padding-box;
+    background: #ccc;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #cccccc), color-stop(0.6, #eeeeee));
+    background-image: -webkit-linear-gradient(center bottom, #cccccc 0%, #eeeeee 60%);
+    background-image: -moz-linear-gradient(center bottom, #cccccc 0%, #eeeeee 60%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc', GradientType=0);
+    background-image: linear-gradient(to top, #cccccc 0%, #eeeeee 60%);
+  }
+  html[dir="rtl"] .select2-container .select2-choice .select2-arrow {
+    left: 0;
+    right: auto;
+    border-left: none;
+    border-right: 1px solid #aaa;
+    border-radius: 4px 0 0 4px;
+  }
+  .select2-container .select2-choice .select2-arrow b {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('select2.png') no-repeat 0 1px;
+  }
+  html[dir="rtl"] .select2-container .select2-choice .select2-arrow b {
+    background-position: 2px 1px;
+  }
+  .select2-search {
+    display: inline-block;
+    width: 100%;
+    min-height: 26px;
+    margin: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: relative;
+    z-index: 10000;
+    white-space: nowrap;
+  }
+  .select2-search input {
+    width: 100%;
+    height: auto !important;
+    min-height: 26px;
+    padding: 4px 20px 4px 5px;
+    margin: 0;
+    outline: 0;
+    font-family: sans-serif;
+    font-size: 1em;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #ffffff url('select2.png') no-repeat 100% -22px;
+    background: url('select2.png') no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #ffffff), color-stop(0.99, #eeeeee));
+    background: url('select2.png') no-repeat 100% -22px, -webkit-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
+    background: url('select2.png') no-repeat 100% -22px, -moz-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
+    background: url('select2.png') no-repeat 100% -22px, linear-gradient(to bottom, #ffffff 85%, #eeeeee 99%) 0 0;
+  }
+  html[dir="rtl"] .select2-search input {
+    padding: 4px 5px 4px 20px;
+    background: #ffffff url('select2.png') no-repeat -37px -22px;
+    background: url('select2.png') no-repeat -37px -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #ffffff), color-stop(0.99, #eeeeee));
+    background: url('select2.png') no-repeat -37px -22px, -webkit-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
+    background: url('select2.png') no-repeat -37px -22px, -moz-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
+    background: url('select2.png') no-repeat -37px -22px, linear-gradient(to bottom, #ffffff 85%, #eeeeee 99%) 0 0;
+  }
+  .select2-drop.select2-drop-above .select2-search input {
+    margin-top: 4px;
+  }
+  .select2-search input.select2-active {
+    background: #ffffff url('select2-spinner.gif') no-repeat 100%;
+    background: url('select2-spinner.gif') no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #ffffff), color-stop(0.99, #eeeeee));
+    background: url('select2-spinner.gif') no-repeat 100%, -webkit-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
+    background: url('select2-spinner.gif') no-repeat 100%, -moz-linear-gradient(center bottom, #ffffff 85%, #eeeeee 99%);
+    background: url('select2-spinner.gif') no-repeat 100%, linear-gradient(to bottom, #ffffff 85%, #eeeeee 99%) 0 0;
+  }
+  .select2-container-active .select2-choice,
+  .select2-container-active .select2-choices {
+    border: 1px solid #5897fb;
+    outline: none;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  .select2-dropdown-open .select2-choice {
+    border-bottom-color: transparent;
+    -webkit-box-shadow: 0 1px 0 #fff inset;
+    box-shadow: 0 1px 0 #fff inset;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ffffff), color-stop(0.5, #eeeeee));
+    background-image: -webkit-linear-gradient(center bottom, #ffffff 0%, #eeeeee 50%);
+    background-image: -moz-linear-gradient(center bottom, #ffffff 0%, #eeeeee 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
+    background-image: linear-gradient(to top, #ffffff 0%, #eeeeee 50%);
+  }
+  .select2-dropdown-open.select2-drop-above .select2-choice,
+  .select2-dropdown-open.select2-drop-above .select2-choices {
+    border: 1px solid #5897fb;
+    border-top-color: transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(0.5, #eeeeee));
+    background-image: -webkit-linear-gradient(center top, #ffffff 0%, #eeeeee 50%);
+    background-image: -moz-linear-gradient(center top, #ffffff 0%, #eeeeee 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #eeeeee 50%);
+  }
+  .select2-dropdown-open .select2-choice .select2-arrow {
+    background: transparent;
+    border-left: none;
+    filter: none;
+  }
+  html[dir="rtl"] .select2-dropdown-open .select2-choice .select2-arrow {
+    border-right: none;
+  }
+  .select2-dropdown-open .select2-choice .select2-arrow b {
+    background-position: -18px 1px;
+  }
+  html[dir="rtl"] .select2-dropdown-open .select2-choice .select2-arrow b {
+    background-position: -16px 1px;
+  }
+  .select2-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  /* results */
+  .select2-results {
+    max-height: 200px;
+    padding: 0 0 0 4px;
+    margin: 4px 4px 4px 0;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  html[dir="rtl"] .select2-results {
+    padding: 0 4px 0 0;
+    margin: 4px 0 4px 4px;
+  }
+  .select2-results ul.select2-result-sub {
+    margin: 0;
+    padding-left: 0;
+  }
+  .select2-results li {
+    list-style: none;
+    display: list-item;
+    background-image: none;
+  }
+  .select2-results li.select2-result-with-children > .select2-result-label {
+    font-weight: bold;
+  }
+  .select2-results .select2-result-label {
+    padding: 3px 7px 4px;
+    margin: 0;
+    cursor: pointer;
+    min-height: 1em;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .select2-results-dept-1 .select2-result-label {
+    padding-left: 20px;
+  }
+  .select2-results-dept-2 .select2-result-label {
+    padding-left: 40px;
+  }
+  .select2-results-dept-3 .select2-result-label {
+    padding-left: 60px;
+  }
+  .select2-results-dept-4 .select2-result-label {
+    padding-left: 80px;
+  }
+  .select2-results-dept-5 .select2-result-label {
+    padding-left: 100px;
+  }
+  .select2-results-dept-6 .select2-result-label {
+    padding-left: 110px;
+  }
+  .select2-results-dept-7 .select2-result-label {
+    padding-left: 120px;
+  }
+  .select2-results .select2-highlighted {
+    background: #3875d7;
+    color: #fff;
+  }
+  .select2-results li em {
+    background: #feffde;
+    font-style: normal;
+  }
+  .select2-results .select2-highlighted em {
+    background: transparent;
+  }
+  .select2-results .select2-highlighted ul {
+    background: #fff;
+    color: #000;
+  }
+  .select2-results .select2-no-results,
+  .select2-results .select2-searching,
+  .select2-results .select2-ajax-error,
+  .select2-results .select2-selection-limit {
+    background: #f4f4f4;
+    display: list-item;
+    padding-left: 5px;
+  }
 /*
 disabled look for disabled choices in the results dropdown
 */
@@ -1370,7 +1370,7 @@ html,
   height: 100%;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   background: #ecf0f1;
   font-size: 14px;
@@ -1415,7 +1415,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
 }
 h1 small,
@@ -1435,7 +1435,7 @@ h6 small {
   padding-bottom: 0;
   font-size: 19px;
   color: #444c52;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .page-header.page-header-action {
   line-height: 30px;
@@ -1740,7 +1740,7 @@ hr {
   background: #c0392b !important;
 }
 .popover {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   padding: 0;
@@ -1768,7 +1768,7 @@ hr {
   border-radius: 2px;
   box-shadow: 0 0 0 transparent !important;
   border: 1px solid #e1e3e4;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .form-control:focus {
   border-color: #c4c4c4;
@@ -1811,7 +1811,7 @@ hr {
 .selectize-input {
   box-shadow: 0 0 0 transparent !important;
   border-color: #e1e3e4;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .selectize-dropdown .active {
   background: #f5f5f5;
@@ -1855,7 +1855,7 @@ hr {
   color: #3e5465;
   font-weight: 400;
   font-size: 13px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .form-simple .bootstrap-checkbox .btn {
   padding: 0 2px;
@@ -1911,7 +1911,7 @@ hr {
   color: #3e5465;
 }
 .form-simple .selectize-input {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 6px 12px;
   border: 0 none !important;
   font-size: 14px;
@@ -1921,7 +1921,7 @@ hr {
   font-size: 14px;
 }
 .form-simple .selectize-dropdown {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   border-top: 5px solid #444c52;
   -webkit-border-radius: 4px;
@@ -2072,7 +2072,7 @@ hr {
 .btn-group .dropdown-menu a,
 .btn-cog .dropdown-menu a {
   color: #3c4242;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 25px;
 }
 .dropdown .dropdown-menu.dropdown-menu-right:after,
@@ -2133,7 +2133,7 @@ hr {
 }
 .dropup .dropdown-menu a {
   color: #3c4242;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .btn-group.open .dropdown-toggle {
   box-shadow: 0 0 0 transparent !important;
@@ -2168,7 +2168,7 @@ hr {
   line-height: 33px;
   background: rgba(0, 0, 0, 0.3);
   color: #f5f5f5;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   padding-right: 0;
 }
@@ -2253,7 +2253,7 @@ hr {
   padding-left: 0;
   padding-right: 0;
   line-height: 26px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: none !important;
   background-image: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -2303,7 +2303,7 @@ hr {
 }
 .center-header .navbar-header .navbar-brand h1 {
   font-weight: 700;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 21px;
   margin: 0;
 }
@@ -2385,7 +2385,7 @@ hr {
 .tab-content {
   background: #ffffff;
   border: 1px solid #e1e3e4;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 15px;
   margin-bottom: 20px;
 }
@@ -2518,7 +2518,7 @@ textarea::-webkit-scrollbar {
   width: .8em;
 }
 .breadcrumb {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .breadcrumb li a {
   font-size: 13px;
@@ -2586,7 +2586,7 @@ textarea::-webkit-scrollbar {
   color: #dddddd;
 }
 .table {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
 }
 .table > thead > tr > th,
@@ -2600,7 +2600,7 @@ textarea::-webkit-scrollbar {
 }
 .table > thead > tr > th {
   border-left: 1px solid #dddddd;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 12px;
@@ -2804,7 +2804,7 @@ textarea::-webkit-scrollbar {
 }
 .panel-tabs .tab-content {
   padding: 15px 15px 0;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   border: 0;
   margin-bottom: 0;
 }
@@ -2875,7 +2875,7 @@ textarea::-webkit-scrollbar {
   cursor: pointer;
 }
 .panel-collapse .panel-body {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .panel-table .panel-heading {
   height: auto;
@@ -2916,7 +2916,7 @@ textarea::-webkit-scrollbar {
 .panel-stats-icon .panel-data span {
   display: block;
   font-size: 14px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #7f8c8d;
 }
 .panel-stats .panel-data > i,
@@ -2983,7 +2983,7 @@ textarea::-webkit-scrollbar {
   display: block;
   font-size: 13px;
   font-weight: 400;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .panel-profile .profile-about-summary,
 .panel-profile .profile-about-tags {
@@ -2998,7 +2998,7 @@ textarea::-webkit-scrollbar {
 .panel-profile .profile-about-summary p,
 .panel-profile .profile-about-tags p {
   margin: 0;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
 }
 .panel-profile .profile-about-tags {
@@ -3006,7 +3006,7 @@ textarea::-webkit-scrollbar {
 }
 .tags a {
   display: block;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   display: inline-block;
   margin-right: 5px;
   margin-bottom: 5px;
@@ -3100,12 +3100,12 @@ textarea::-webkit-scrollbar {
 #donut-chart text {
   font-weight: normal !important;
   font-size: 7px !important;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 #donut-chart text tspan {
   font-weight: normal !important;
   font-size: 7px !important;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 .panel-color {
   color: #ffffff;
@@ -3158,7 +3158,7 @@ textarea::-webkit-scrollbar {
 .panel-color .panel-data span {
   display: block;
   font-size: 14px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #ffffff;
 }
 .panel-color .panel-data > i {
@@ -3243,7 +3243,7 @@ textarea::-webkit-scrollbar {
   border-top: 0;
 }
 #controls .ullist li a {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 #controls .ullist li.active a {
   color: #00a89c !important;
@@ -3251,7 +3251,7 @@ textarea::-webkit-scrollbar {
 /* Panel - List Groups / Menu
 ------------------------------*/
 .panel-list .list-group li.list-group-item a {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .panel-list .list-group-icon li.list-group-item .fa-block {
   width: 20px;
@@ -3430,7 +3430,7 @@ textarea::-webkit-scrollbar {
 .panel-comment .media {
   margin: 0 !important;
   padding-left: 20px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .activity-stream .media .media-heading,
 .panel-comment .media .media-heading {
@@ -3438,7 +3438,7 @@ textarea::-webkit-scrollbar {
   font-size: 14px;
   font-weight: 400;
   padding: 5px 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .activity-stream .media .media-heading a,
 .panel-comment .media .media-heading a {
@@ -3456,7 +3456,7 @@ textarea::-webkit-scrollbar {
 .activity-stream .media .meta-time,
 .panel-comment .media .meta-time {
   font-weight: 400;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: rgba(68, 76, 82, 0.6);
   font-size: 12px;
   margin-bottom: 10px;
@@ -3502,7 +3502,7 @@ textarea::-webkit-scrollbar {
 .panel-comment .media .loadmore {
   position: relative;
   top: 1px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-size: 11px;
 }
@@ -3539,7 +3539,7 @@ textarea::-webkit-scrollbar {
 .event-list,
 .icon-w-list,
 .minified-task-list {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: -1px !important;
   -webkit-border-bottom-right-radius: 3px;
   -moz-border-radius-bottomright: 3px;
@@ -3713,7 +3713,7 @@ textarea::-webkit-scrollbar {
   line-height: 20px;
 }
 .list-group.task-list .task-date {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-size: 13px;
 }
@@ -3806,7 +3806,7 @@ textarea::-webkit-scrollbar {
 }
 .list-group .tooltip {
   font-size: 12px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .list-group.minified-task-list .row {
   margin: 0px;
@@ -3872,7 +3872,7 @@ textarea::-webkit-scrollbar {
 }
 .list-group.milestone-list .milestone-edit .dropdown-menu li a {
   color: #3c4242;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 25px;
   opacity: 1;
   border-left: 1px solid #dfe7ea;
@@ -3917,7 +3917,7 @@ textarea::-webkit-scrollbar {
 }
 .list-group.milestone-list .milestone-item .task-meta {
   margin-bottom: 10px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: rgba(62, 84, 101, 0.7);
 }
 .list-group.milestone-list .milestone-item .task-meta p {
@@ -3936,7 +3936,7 @@ textarea::-webkit-scrollbar {
   border-left: 0;
   border-bottom: 0;
   padding: 12px 0;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .list-group.assets-list .list-group-item .dropdown-menu > li {
   padding-left: 0;
@@ -4170,7 +4170,7 @@ textarea::-webkit-scrollbar {
   padding-bottom: 7px;
 }
 .media-list .media {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 16px 15px 15px;
   border-top: 1px solid #e1e3e4;
   margin-top: 0;
@@ -4198,7 +4198,7 @@ textarea::-webkit-scrollbar {
   margin: 0;
 }
 .media-list .media .media-heading {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
   margin-top: 2px;
@@ -4261,14 +4261,14 @@ textarea::-webkit-scrollbar {
 .media-header .list-inline li {
   border-left: 1px solid #e1e3e4;
   padding-left: 10px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .media-header .list-inline li:first-child {
   padding-left: 0;
   border-left: 0;
 }
 .message-body {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 0 5px 10px;
 }
 .reply {
@@ -4316,12 +4316,12 @@ body.modal-open #wrap {
   margin-top: 0;
 }
 .modal .modal-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
   font-weight: 400;
 }
 .modal .modal-body {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .modal-item .modal-header {
   background: rgba(236, 240, 241, 0.35);
@@ -4333,7 +4333,7 @@ body.modal-open #wrap {
 }
 #calendar {
   padding: 15px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 #calendar .calendar a {
   text-decoration: none;
@@ -5359,10 +5359,10 @@ body.modal-open #wrap {
 .typography .etc-font-primary h4,
 .typography .etc-font-primary h5,
 .typography .etc-font-primary h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .typography .etc-font-alt {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .typography .box h3:first-child {
   margin-top: 0;
@@ -5391,5 +5391,5 @@ body.modal-open #wrap {
   margin-bottom: 0;
 }
 .modal-demo {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }

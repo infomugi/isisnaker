@@ -3,7 +3,7 @@
 /* @var $model Serikat */
 
 $this->breadcrumbs=array(
-	'Serikats'=>array('index'),
+	'Serikat Pekerja'=>array('daftar'),
 	'Kelola',
 	);
 

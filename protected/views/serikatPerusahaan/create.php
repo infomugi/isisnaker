@@ -1,13 +1,13 @@
 <?php
-/* @var $this SerikatPerusahaanController */
-/* @var $model SerikatPerusahaan */
+/* @var $this Serikat PerusahaanController */
+/* @var $model Serikat Perusahaan */
 
 $this->breadcrumbs=array(
-	'Serikat Perusahaans'=>array('index'),
+	'Serikat Perusahaan'=>array('index'),
 	'Tambah',
 	);
 
-	$this->pageTitle='Tambah SerikatPerusahaan';
-	?>
+$this->pageTitle='Tambah Serikat Perusahaan';
+?>
 
-	<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

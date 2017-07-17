@@ -3,7 +3,7 @@
 /* @var $model Kecamatan */
 
 $this->breadcrumbs=array(
-	'Kecamatans'=>array('index'),
+	'Kecamatan'=>array('index'),
 	$model->kd_kecamatan=>array('view','id'=>$model->kd_kecamatan),
 	'Update',
 	);

@@ -3,7 +3,7 @@
 /* @var $model User */
 
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
+	'Pengguna'=>array('daftar'),
 	$model->id_user=>array('view','id'=>$model->id_user),
 	'Update',
 	);

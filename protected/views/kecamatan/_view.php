@@ -24,55 +24,55 @@ $sangatkecil =  Yii::app()->db->createCommand("SELECT count(id) FROM perusahaan 
 
 			<div class="box-body">
 				
-					<div class="panel panel-default panel-stats">
-		<div class="panel-heading">
-		<h3 class="panel-title">Klasifikasi Perusahaan di Kecamatan <?php echo $data->nama; ?></h3>
-		</div>
-		<div class="panel-body no-padding">
-			<div class="row">
-				<div class="col-md-3 col-sm-3 col-xs-6">
-					<div class="panel-data">
-						<?php echo $besar; ?>
-						<span>Besar</span>
+				<div class="panel panel-default panel-stats">
+					<div class="panel-heading">
+						<h3 class="panel-title">Klasifikasi Perusahaan di Kecamatan <?php echo $data->nama; ?></h3>
 					</div>
-				</div>
-				<div class="col-md-2 col-sm-3 col-xs-6">
-					<div class="panel-data">
-						<?php echo $sedang; ?>
-						<span>Sedang</span>
+					<div class="panel-body no-padding">
+						<div class="row">
+							<div class="col-md-3 col-sm-3 col-xs-6">
+								<div class="panel-data">
+									<?php echo $besar; ?>
+									<span>Besar</span>
+								</div>
+							</div>
+							<div class="col-md-2 col-sm-3 col-xs-6">
+								<div class="panel-data">
+									<?php echo $sedang; ?>
+									<span>Sedang</span>
+								</div>
+							</div>
+							<div class="col-md-2 col-sm-3 col-xs-6">
+								<div class="panel-data">
+									<?php echo $menengah; ?>
+									<span>Menengah</span>
+								</div>
+							</div>
+							<div class="col-md-2 col-sm-3 col-xs-6">
+								<div class="panel-data">
+									<?php echo $kecil; ?>
+									<span>Kecil</span>
+								</div>
+							</div>
+							<div class="col-md-2 col-sm-3 col-xs-6">
+								<div class="panel-data">
+									<?php echo $sangatkecil; ?>
+									<span>< Kecil</span>
+								</div>
+							</div>
+
+						</div>
+
+
 					</div>
-				</div>
-				<div class="col-md-2 col-sm-3 col-xs-6">
-					<div class="panel-data">
-						<?php echo $menengah; ?>
-						<span>Menengah</span>
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-3 col-xs-6">
-					<div class="panel-data">
-						<?php echo $kecil; ?>
-						<span>Kecil</span>
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-3 col-xs-6">
-					<div class="panel-data">
-						<?php echo $sangatkecil; ?>
-						<span>< Kecil</span>
+					<div class="panel-footer clearfix hidden-print">
+						<span class="pull-left">
+							Update Terakhir: <?php echo date('d-m-Y'); ?>
+						</span>
 					</div>
 				</div>
 
 			</div>
-
-
-		</div>
-		<div class="panel-footer clearfix">
-			<span class="pull-left">
-				Update Terakhir: <?php echo date('d-m-Y'); ?>
-			</span>
-		</div>
-	</div>
-
-			</div>
-	
+			
 		</div><!-- /.box -->
 	</div>

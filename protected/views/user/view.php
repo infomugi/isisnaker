@@ -3,8 +3,8 @@
 /* @var $model User */
 
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->id_user,
+	'Pengguna'=>array('daftar'),
+	$model->namalengkap,
 	);
 
 $this->pageTitle='Profile - '.ucfirst($model->username);
