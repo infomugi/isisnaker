@@ -174,6 +174,7 @@ class KecamatanController extends Controller
 
 	public function actionPerusahaan()
 	{
+		$this->layout = "page";
 		$dataProvider=new CActiveDataProvider('Kecamatan',array(
 			'criteria'=>array(
 				'order'=>'nama ASC'
