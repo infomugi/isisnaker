@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 17, 2017 at 09:07 AM
+-- Generation Time: Jul 17, 2017 at 10:08 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -2042,7 +2042,15 @@ INSERT INTO `activities` (`id_activities`, `created_date`, `type`, `description`
 (1995, '2017-07-17 11:27:11', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
 (1996, '2017-07-17 11:27:19', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
 (1997, '2017-07-17 11:27:25', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
-(1998, '2017-07-17 11:27:33', 1, 'Login dari IP : ::1', 1, 3, 3, 0);
+(1998, '2017-07-17 11:27:33', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(1999, '2017-07-17 14:12:16', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
+(2000, '2017-07-17 14:12:23', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(2001, '2017-07-17 14:12:47', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
+(2002, '2017-07-17 14:12:51', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(2003, '2017-07-17 14:14:44', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
+(2004, '2017-07-17 14:14:50', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2005, '2017-07-17 14:15:01', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
+(2006, '2017-07-17 14:15:05', 1, 'Login dari IP : ::1', 1, 3, 3, 0);
 
 -- --------------------------------------------------------
 
@@ -6334,7 +6342,8 @@ INSERT INTO `serikat_perusahaan` (`id_serikat_perusahaan`, `serikat_id`, `perusa
 (15, 8, 552, 1),
 (16, 4, 20, 1),
 (17, 4, 29, 1),
-(18, 4, 1060, 1);
+(18, 4, 1060, 1),
+(19, 7, 540, 1);
 
 -- --------------------------------------------------------
 
@@ -6940,9 +6949,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `created_date`, `update_date`, `last_login`, `username`, `password`, `email`, `namalengkap`, `tanggallahir`, `handphone`, `alamat`, `bagian`, `level`, `image`) VALUES
 (1, '2016-05-10', '2016-08-09', '2016-11-04 02:34:04', 'mugi', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', 'Mugi Rachmat', '0000-00-00', '087824931504', 'A', 1, 2, ''),
-(3, '2016-06-10', '2017-07-17', '2017-07-17 11:27:11', 'syaker', '21232f297a57a5a743894a0e4a801fc3', 'syaker@gmail.com', 'Mugi Rachmat', '0000-00-00', '087824931504', 'Bandung', 2, 2, ''),
+(3, '2016-06-10', '2017-07-17', '2017-07-17 02:14:44', 'syaker', '21232f297a57a5a743894a0e4a801fc3', 'syaker@gmail.com', 'Mugi Rachmat', '0000-00-00', '087824931504', 'Bandung', 2, 2, ''),
 (4, '2016-06-10', '0000-00-00', '2017-07-14 02:32:53', 'smk', '21232f297a57a5a743894a0e4a801fc3', 'smk@gmail.com', '', '0000-00-00', '', '', 1, 2, ''),
-(5, '2016-05-10', '2016-07-27', '2017-07-17 11:27:25', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', 'Mugi Rachmat', '0000-00-00', '1212', '121212aaa', 2, 1, 'admin.jpg');
+(5, '2016-05-10', '2016-07-27', '2017-07-17 02:15:01', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', 'Mugi Rachmat', '0000-00-00', '1212', '121212aaa', 2, 1, 'admin.jpg');
 
 --
 -- Indexes for dumped tables
@@ -7093,7 +7102,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `activities`
 --
 ALTER TABLE `activities`
-  MODIFY `id_activities` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1999;
+  MODIFY `id_activities` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2007;
 --
 -- AUTO_INCREMENT for table `agama`
 --
@@ -7173,7 +7182,7 @@ ALTER TABLE `serikat`
 -- AUTO_INCREMENT for table `serikat_perusahaan`
 --
 ALTER TABLE `serikat_perusahaan`
-  MODIFY `id_serikat_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_serikat_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `statusnikah`
 --
