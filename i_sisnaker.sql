@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 17, 2017 at 10:08 AM
+-- Generation Time: Aug 31, 2017 at 05:01 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -2050,7 +2050,77 @@ INSERT INTO `activities` (`id_activities`, `created_date`, `type`, `description`
 (2003, '2017-07-17 14:14:44', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
 (2004, '2017-07-17 14:14:50', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
 (2005, '2017-07-17 14:15:01', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
-(2006, '2017-07-17 14:15:05', 1, 'Login dari IP : ::1', 1, 3, 3, 0);
+(2006, '2017-07-17 14:15:05', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(2007, '2017-07-17 15:10:21', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
+(2008, '2017-07-17 15:54:19', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(2009, '2017-07-17 16:34:02', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
+(2010, '2017-07-17 16:34:08', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2011, '2017-07-17 16:34:37', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
+(2012, '2017-07-17 16:34:45', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(2013, '2017-07-18 10:10:37', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
+(2014, '2017-07-18 10:10:42', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2015, '2017-07-18 11:14:50', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
+(2016, '2017-07-18 11:14:56', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(2017, '2017-07-18 12:01:27', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
+(2018, '2017-07-18 12:01:32', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2019, '2017-07-18 12:06:14', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2020, '2017-07-18 12:29:29', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2021, '2017-07-18 12:29:52', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2022, '2017-07-18 12:29:56', 10, 'Print Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 23, 5, 0, 0),
+(2023, '2017-07-18 12:30:39', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2024, '2017-07-18 12:31:58', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2025, '2017-07-18 12:32:18', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2026, '2017-07-18 12:32:35', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2027, '2017-07-18 12:33:18', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2028, '2017-07-18 12:33:48', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2029, '2017-07-18 12:33:58', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2030, '2017-07-18 12:34:13', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2031, '2017-07-18 12:34:23', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2032, '2017-07-18 12:34:52', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2033, '2017-07-18 12:35:24', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2034, '2017-07-18 12:37:14', 10, 'Melihat Data Keluarga tidak Bekerja, No KK : 10920192019209102910', 21, 5, 0, 0),
+(2035, '2017-07-18 12:39:24', 10, 'Melihat Menu Kelola Pengguna SISNAKER', 21, 5, 0, 0),
+(2036, '2017-07-18 12:39:27', 10, 'Melihat Menu Kelola Pengguna SISNAKER', 21, 5, 0, 0),
+(2037, '2017-07-18 12:43:40', 10, 'Melihat Menu Kelola Pengguna SISNAKER', 21, 5, 0, 0),
+(2038, '2017-07-18 12:43:48', 10, 'Melihat Menu Pengguna Paling Aktif di SISNAKER', 21, 5, 0, 0),
+(2039, '2017-07-18 12:49:33', 10, 'Melihat Menu Kelola Pengguna SISNAKER', 21, 5, 0, 0),
+(2040, '2017-07-18 12:53:29', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2041, '2017-07-18 12:58:59', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
+(2042, '2017-07-18 12:59:29', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2043, '2017-07-18 14:31:50', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
+(2044, '2017-07-18 14:45:06', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2045, '2017-07-18 14:45:14', 10, 'Melihat Menu Kelola Pengguna SISNAKER', 21, 5, 0, 0),
+(2046, '2017-07-18 14:45:18', 10, 'Melihat Profile : mugi', 21, 5, 0, 0),
+(2047, '2017-07-18 14:58:39', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
+(2048, '2017-07-18 14:58:59', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2049, '2017-07-18 16:06:58', 10, 'Melihat Menu Kelola Pengguna SISNAKER', 21, 5, 0, 0),
+(2050, '2017-07-19 14:07:10', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2051, '2017-07-19 14:24:55', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
+(2052, '2017-07-19 14:25:00', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(2053, '2017-07-19 14:52:39', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
+(2054, '2017-07-24 11:29:22', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2055, '2017-07-25 15:59:03', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2056, '2017-07-26 12:19:05', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2057, '2017-07-31 14:49:26', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2058, '2017-07-31 14:49:36', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
+(2059, '2017-07-31 14:49:40', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(2060, '2017-08-04 13:55:42', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(2061, '2017-08-04 14:32:43', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
+(2062, '2017-08-04 14:32:52', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2063, '2017-08-04 14:46:25', 10, 'Melihat Menu Kelola Pengguna SISNAKER', 21, 5, 0, 0),
+(2064, '2017-08-04 14:46:30', 10, 'Melihat Menu Pengguna Paling Aktif di SISNAKER', 21, 5, 0, 0),
+(2065, '2017-08-04 14:46:44', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
+(2066, '2017-08-04 14:46:50', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(2067, '2017-08-08 10:46:16', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2068, '2017-08-11 11:02:15', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2069, '2017-08-15 09:24:04', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2070, '2017-08-15 09:42:03', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
+(2071, '2017-08-15 09:42:08', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(2072, '2017-08-15 09:45:30', 0, 'Logout dari IP : ::1', 0, 3, 0, 0),
+(2073, '2017-08-15 09:45:44', 1, 'Login dari IP : ::1', 1, 5, 3, 0),
+(2074, '2017-08-15 09:50:30', 0, 'Logout dari IP : ::1', 0, 5, 0, 0),
+(2075, '2017-08-15 09:50:36', 1, 'Login dari IP : ::1', 1, 3, 3, 0),
+(2076, '2017-08-15 15:20:20', 1, 'Login dari IP : ::1', 1, 5, 3, 0);
 
 -- --------------------------------------------------------
 
@@ -3112,7 +3182,22 @@ INSERT INTO `pencaker` (`kd_pencaker`, `nama`, `tempatlahir`, `tgllahir`, `jenis
 (93, 'Johannes Hasoloan S', 'Tangerang', '1995-11-21', '1', 199, 1, 7, 2, 'SMA Perguruan Nasional', 2014, 2, NULL, '324400505171250', '3204392111950005', '082217023615', 'johanshinaga3@gmail.com', '0', 165, 66, 'Kp. Kopeng Ciseupan Rt,04 Rw.04 Kel. Panyocokan Kec. Ciwidey Kab. Bandung', '2017-05-24 10:55:20', 5, 0, '1970-01-01 07:00:00'),
 (94, 'Jenni Setiawati', 'Bandung', '1999-01-24', '0', 193, 1, 16, 28, 'SMK', 2017, 1, NULL, '324426051711620', '3204116901990001', '08984384907', '', '0', 155, 45, 'Kp. Babapak Sondari Rt.03 Rw.07 Desa Pangauban Kec. Katapang', '2017-05-26 12:00:00', 5, 0, '1970-01-01 12:00:00'),
 (95, 'Ratih Pamerdasih', 'Bandung', '1994-02-20', '0', 224, 1, 10, 22, 'UPI', 2016, 1, NULL, '324405061711675', '3204096002940001', '08997965867', 'pamerdasih@gmail.com', '3', 150, 45, 'Komp. Permata Kopo Blok C. No.19 Rt.05 Rw.14 Sayati Margahayu', '2017-06-05 11:31:22', 5, 0, '1970-01-01 07:00:00'),
-(96, 'Sri Kartika Rahayu', 'Bandung', '1998-09-13', '0', 31, 1, 7, 3, 'SMKN 1 Rancaekek', 2014, 1, NULL, '324403071711858', '3204285309980002', '089648542677', 'srikartika1906@gmail.com', '0', 154, 50, 'Kp. Bojong Koneng Rt.04 Rw.05 Desa Cangkuang Kec. Rancaekek', '2017-07-03 01:01:09', 5, 0, '1970-01-01 07:00:00');
+(96, 'Sri Kartika Rahayu', 'Bandung', '1998-09-13', '0', 31, 1, 7, 3, 'SMKN 1 Rancaekek', 2014, 1, NULL, '324403071711858', '3204285309980002', '089648542677', 'srikartika1906@gmail.com', '0', 154, 50, 'Kp. Bojong Koneng Rt.04 Rw.05 Desa Cangkuang Kec. Rancaekek', '2017-07-03 01:01:09', 5, 0, '1970-01-01 07:00:00'),
+(97, 'Firmansyah', 'Bandung', '1995-04-17', '1', 203, 1, 16, 19, 'SMK Medeka', 2013, 1, NULL, '32442005132028', '320417170495001', '085758341224', '', '0', 165, 58, 'Kp. Pasirkaliki Rw.06 Rt.02 Kec. Cimaung ', '2017-07-18 10:14:31', 5, 0, '1970-01-01 07:00:00'),
+(98, 'Achmad Syaripudin', 'Bandung', '1994-10-19', '1', 239, 1, 7, 2, 'SMA Negeri Baleendah', 2015, 1, NULL, '32441807171524', '320417191094007', '082315414002', 'syarifudinhani@gmail.com', '0', 169, 67, 'Kp. Ragamukti Rt.02 Rw.01 Desa Sukamaju Kec. Cimaung', '2017-07-18 10:47:05', 5, 0, '1970-01-01 07:00:00'),
+(99, 'Nenti Monintis', 'Bandung', '1994-11-02', '0', 263, 1, 7, 2, '-', 2013, 1, NULL, '32446205171188', '3204444211960002', '08999097715', '-', '0', 149, 48, 'Kp. Cirenten Rt.01 Rw.01 Desa Tanjung Sari Kec.Cangkuang', '2017-07-18 10:57:32', 5, 0, '1970-01-01 07:00:00'),
+(100, 'Rima Nuraeni', 'Bandung', '1999-10-27', '0', 215, 1, 7, 10, 'SMK Bandung Selatan 2', 2017, 1, NULL, '32441907171586', '320409671000012', '089663172603', 'rimanuraeni1617@gmail.com', '0', 155, 48, 'Kp. Nusa Rt.04 Rw.15 Desa Rancamanyar ', '2017-07-19 12:00:00', 5, 0, '1970-01-01 12:00:00'),
+(101, 'Zhiadathun Nissa N', 'Bandung', '1998-09-27', '0', 224, 1, 16, 1, 'SMA Margaasih', 2017, 1, NULL, '32441907171585', '3204090709980001', '085721857827', 'zhiadathunnissa@gmail.com', '0', 158, 46, 'Jl. Pasar lama sayati No.56 Rt.06 Rw.05 Desa Sayati Kec. Margahayu', '2017-07-19 02:17:21', 5, 0, '1970-01-01 07:00:00'),
+(102, 'Asri Agustin', 'Bandung', '1999-08-25', '0', 226, 1, 6, 2, 'SMP 3 Soreang', 2014, 1, NULL, '32442407171663', '3204376508990004', '0895390460092', '', '0', 155, 51, 'Kp. Babakan Rt.02 Rw.04 Desa Sekarwangi Kec. Soreang', '2017-07-24 11:32:41', 5, 0, '1970-01-01 07:00:00'),
+(103, 'Edo Muardi Usman', 'Bandung', '1991-12-08', '1', 118, 1, 7, 6, 'SMK Marhas', 2010, 1, NULL, '32440902403', '3204060812910001', '089663613419', '', '0', 165, 50, 'Kp. Muara Rt.01 Rw.10 Desa Kopo Kec. Kutawaringin', '2017-07-26 12:27:48', 5, 0, '1970-01-01 07:00:00'),
+(104, 'I Riantandira G', 'Bandung', '1996-08-07', '1', 118, 1, 7, 10, 'SMK Sandy Putra', 2014, 1, NULL, '324426071171745', '3204460708960001', '089666095461', '', '0', 165, 50, 'Kmp. Kopo Rt.01 Rw.06 Desa Kopo Kec. Kutawaringin', '2017-07-26 12:30:17', 5, 0, '1970-01-01 07:00:00'),
+(105, 'Fachrul Alfauzan', 'Bandung', '1998-10-19', '1', 225, 1, 7, 2, 'SMAN 1 Soreang', 2016, 1, NULL, '32440808172112', '320437590980006', '089502672846', '', '0', 165, 68, 'Kp. Lebakwangi Rt.03 Rw.03 Desa Sekarwangi Kec. Soreang', '2017-08-08 10:48:37', 5, 0, '1970-01-01 07:00:00'),
+(106, 'Yogie Nurfajar', 'Bandung', '1997-07-07', '1', 8, 1, 7, 27, 'SMKN 1 Katapang', 2016, 1, NULL, '32441108172216', '3204440707970016', '081809766496', '', '0', 152, 50, 'Kp. Sindang Palay Rt.03 Rw.09 Desa Bandasari Kec. Cangkuang', '2017-08-11 11:04:51', 5, 0, '1970-01-01 07:00:00'),
+(107, 'Dani Koswara', 'Bandung', '1983-01-01', '1', 57, 1, 7, 2, 'SMA PGRI Cicalengka', 2001, 1, NULL, '32441008172187', '3204270101830018', '081222358173', '', '0', 161, 45, 'Kp. Sidangsari Rt.01 Rw.12 Desa Cikasungka Kec. Cikancung', '2017-08-15 09:27:20', 5, 0, '1970-01-01 07:00:00'),
+(108, 'Siti Nurjanah', 'Bandung', '1995-06-29', '0', 116, 1, 7, 2, 'SMAN 1 Margahayu', 2013, 1, NULL, '32441508172265', '320116906950002', '089668971979', 'sitialin@gmail.com', '0', 145, 45, 'Kp. Cipongporang Rt.01 Rw.11 Desa Katapang Kec. Katapang', '2017-08-15 09:48:12', 5, 0, '1970-01-01 07:00:00'),
+(109, 'Tri Septian N', 'Bandung', '1995-09-09', '1', 257, 1, 7, 2, 'SMAN 1 Margahayu', 2013, 1, NULL, '32441508172264', '3204090909950001', '08997139833', 'triseptiann@gmail.com', '0', 165, 53, 'Kp. Jambatan Rt.01 Rw.07 Desa Sulaiman Kec. Margahayu', '2017-08-15 09:50:19', 5, 0, '1970-01-01 07:00:00'),
+(110, 'Ilham Nurfalah', 'Bandung', '1999-12-30', '1', 7, 1, 7, 3, 'SMKN 2 Baleendah', 2017, 1, NULL, '32441508172280', '3204323012990013', '089676530984', 'inurfalah5@gmail.com', '0', 157, 47, 'Kp. Mulyasari Rt.03 Rw.18 Desa Baleendah Kec. Baleendah', '2017-08-15 03:23:09', 5, 0, '1970-01-01 07:00:00'),
+(111, 'Septian Riyadus S', 'Bandung', '1998-09-17', '1', 276, 1, 7, 3, 'SMKN 2 Baleendah', 2017, 1, NULL, '32441508172261', '3204161709980003', '085794333776', 'septianriyadus17@gmail.com', '0', 165, 53, 'Kp. Ciruum Rt.01 Rw.06 Desa Wargaluyu Kec. Arjasari', '2017-08-15 03:25:47', 5, 0, '1970-01-01 07:00:00');
 
 -- --------------------------------------------------------
 
@@ -3230,7 +3315,7 @@ CREATE TABLE `perusahaan` (
 --
 
 INSERT INTO `perusahaan` (`id`, `klui`, `nama`, `alamat`, `pimpinan`, `kecamatan`, `jenis_usaha`, `jenis_pemodalan`, `jumlah_tki_wanita`, `jumlah_tki_pria`, `jumlah_tka_wanita`, `jumlah_tka_pria`, `klasifikasi`, `perusahaan_mulai_berlaku`, `perusahaan_akhir_berlaku`, `perusahaan_nomor_sk`, `serikat_nama`, `serikat_nomor`, `serikat_jumlah_wanita`, `serikat_jumlah_pria`, `serikat_ketua`, `bipartit_nomor`, `bipartit_mulai_berlaku`, `bipartit_akhir_berlaku`, `apindo_anggota_aktif`, `apindo_no_kontak`, `bpjs_ketenagakerjaan_wanita`, `bpjs_ketenagakerjaan_pria`, `bpjs_kesehatan_wanita`, `bpjs_kesehatan_pria`, `kopkar_badan_hukum`, `kopkar_tidak_badan_hukum`, `keterangan`, `status`) VALUES
-(1, '32420', 'PENGRAJIN GUITAR " ALLEGRO "', 'Jl. Sinarsari Rt. 05/IV DS. Batukarut  Kec. Arjasari Banjaran', 'Ratna Yuningsih ( 5941478)', 'Arjasari', 'Industri Pembuatan Gitar', 'Perorangan', 34, 0, 0, 0, 'Sedang', '2016-01-29', '2018-11-08', '568 / 39-  HIPK/ PP / 201', '', '', 0, 0, '', '', '0000-00-00', '0000-00-00', 0, '', 0, 0, 0, 0, '', '', '', 0),
+(1, '32420', 'PENGRAJIN GUITAR " ALLEGRO "', 'Jl. Sinarsari Rt. 05/IV DS. Batukarut  Kec. Arjasari Banjaran', 'Ratna Yuningsih ( 5941478)', 'Arjasari', '', 'Perorangan', 34, 0, 0, 0, 'Sedang', '2017-07-31', '2019-05-30', '568 / 39-  HIPK/ PP / 201', '', '', 0, 0, '', '', '1970-01-01', '1970-01-01', 0, '', 0, 0, 0, 0, '', '', '', 0),
 (2, '32420', 'ADETEX  FILAMENT1.1', 'Jl. Raya Banjaran Km. 16,5', '', 'Arjasari', '', 'PMDN', 83, 113, 0, 0, 'Besar', '0000-00-00', '0000-00-00', '', '', '', 0, 0, '', '', '0000-00-00', '0000-00-00', 0, '', 0, 0, 0, 0, '', '', '', 0),
 (3, '32420', 'ADETEX FILAMENT 1.11', 'Jl. Raya Banjaran Km. 16,5', '', 'Arjasari', '', 'PMDN', 286, 243, 0, 0, 'Besar', '0000-00-00', '0000-00-00', '', 'GASPERMINDO', '568 / 41 / HIPK/VII / 2003', 11, 0, '', '', '0000-00-00', '0000-00-00', 0, '', 0, 0, 0, 0, '', '', '', 0),
 (4, '13311', 'ADETEX SPINING', 'Jl. Raya Banjaran  No. 59', '', 'Arjasari', '', 'PMDN', 382, 639, 0, 0, 'Besar', '0000-00-00', '0000-00-00', '', 'SPN', '230/  2097   -HIPK/ X/2008      27  Nopember    20', 0, 0, '', '', '0000-00-00', '0000-00-00', 0, '', 0, 0, 0, 0, '', '', '', 0),
@@ -4290,7 +4375,7 @@ INSERT INTO `perusahaan` (`id`, `klui`, `nama`, `alamat`, `pimpinan`, `kecamatan
 (1052, '32100', 'DEWI SAKTI ANUGRAH PT.', 'Jln.Raya Laswi No.220', '', 'Majalaya', '', 'Swasta Nasional', 61, 4, 0, 0, 'Sedang', '2015-10-15', '2017-10-14', '', '', '', 0, 0, '', '', '0000-00-00', '0000-00-00', 0, '', 0, 0, 0, 0, '', '', '', 0),
 (1053, '32116', 'DEWY TEXTILE FACTORY Ltd, PT.', 'Jl. Raya Laswi No. 1 Majalaya', 'Hery Koesnadi', 'Majalaya', 'Industri Textile', 'PMDN', 104, 6, 0, 0, 'Besar', '0000-00-00', '0000-00-00', '', '', '', 0, 0, '', '', '0000-00-00', '0000-00-00', 0, '', 0, 0, 0, 0, '', '', '', 0),
 (1054, '32114', 'DEWITEX WEAVING', 'Jl. Raya Rancaekek Majalaya No. 255', '', 'Majalaya', '', 'Perseorangan', 14, 4, 0, 0, 'Kecil', '0000-00-00', '0000-00-00', '568/ 342 / X /HIPK/PP/201', '', '', 0, 0, '', '', '0000-00-00', '0000-00-00', 0, '', 0, 0, 0, 0, '', '', '', 0),
-(1055, '32114', '(DEKATEX) DELTA KURNIA TEXTILE PT.', 'Jl. Raya Laswi No. 5 Majalaya', '', 'Majalaya', '', 'Swasta Nasional', 19, 12, 0, 0, 'Menengah', '2015-10-15', '2017-10-14', '', '', '', 0, 0, '', '', '0000-00-00', '0000-00-00', 0, '', 0, 0, 0, 0, '', '', '', 0),
+(1055, '32114', '(DEKATEX) DELTA KURNIA TEXTILE PT.', 'Jl. Raya Laswi No. 5 Majalaya', '', 'Majalaya', '', 'Swasta Nasional', 19, 12, 0, 0, 'Menengah', '2015-10-15', '2017-10-14', '', '', '', 0, 0, '', '', '1970-01-01', '1970-01-01', 0, '', 0, 0, 0, 0, '', '', '', 0),
 (1056, '', 'DEWY TEXTILE FACTORY Ltd, PT.', 'Jl. Raya Laswi No. 1 Majalaya', '', 'Majalaya', 'Industri Textile', 'PMDN', 84, 6, 0, 0, 'Besar', '2015-01-30', '2017-01-29', '', '', '', 0, 0, '', '', '0000-00-00', '0000-00-00', 0, '', 0, 0, 0, 0, '', '', '', 0),
 (1057, '', 'DULANG MAS, CV.', 'Jl. Leuwidulang Majalaya', '', 'Majalaya', 'Industri Textile ', 'Swasta Nasional', 101, 30, 0, 0, 'Besar', '0000-00-00', '0000-00-00', '568/ 36 / I /HIPK/PP/2015', '', '', 0, 0, '', '', '0000-00-00', '0000-00-00', 0, '', 0, 0, 0, 0, '', '', '', 0),
 (1058, '32210', 'DUNIA BARU Konveksi', 'Jln.Bojong Reungas No.10', '', 'Majalaya', '', 'Swasta Nasional', 15, 65, 0, 0, 'Sedang', '2015-01-30', '2017-01-29', '568/ 308/ X /HIPK/PP/2012', '', '', 0, 0, '', '', '0000-00-00', '0000-00-00', 0, '08122029016/5951244 / 595', 0, 0, 0, 0, '', '', '', 0),
@@ -6332,18 +6417,10 @@ CREATE TABLE `serikat_perusahaan` (
 --
 
 INSERT INTO `serikat_perusahaan` (`id_serikat_perusahaan`, `serikat_id`, `perusahaan_id`, `status`) VALUES
-(4, 4, 1055, 1),
 (5, 9, 1007, 1),
 (10, 1, 20, 1),
 (11, 1, 1002, 1),
-(12, 1, 110, 1),
-(13, 8, 20, 1),
-(14, 8, 1002, 1),
-(15, 8, 552, 1),
-(16, 4, 20, 1),
-(17, 4, 29, 1),
-(18, 4, 1060, 1),
-(19, 7, 540, 1);
+(12, 1, 110, 1);
 
 -- --------------------------------------------------------
 
@@ -6949,9 +7026,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `created_date`, `update_date`, `last_login`, `username`, `password`, `email`, `namalengkap`, `tanggallahir`, `handphone`, `alamat`, `bagian`, `level`, `image`) VALUES
 (1, '2016-05-10', '2016-08-09', '2016-11-04 02:34:04', 'mugi', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', 'Mugi Rachmat', '0000-00-00', '087824931504', 'A', 1, 2, ''),
-(3, '2016-06-10', '2017-07-17', '2017-07-17 02:14:44', 'syaker', '21232f297a57a5a743894a0e4a801fc3', 'syaker@gmail.com', 'Mugi Rachmat', '0000-00-00', '087824931504', 'Bandung', 2, 2, ''),
+(3, '2016-06-10', '2017-07-17', '2017-08-15 09:45:30', 'syaker', '21232f297a57a5a743894a0e4a801fc3', 'syaker@gmail.com', 'Mugi Rachmat', '0000-00-00', '087824931504', 'Bandung', 2, 2, ''),
 (4, '2016-06-10', '0000-00-00', '2017-07-14 02:32:53', 'smk', '21232f297a57a5a743894a0e4a801fc3', 'smk@gmail.com', '', '0000-00-00', '', '', 1, 2, ''),
-(5, '2016-05-10', '2016-07-27', '2017-07-17 02:15:01', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', 'Mugi Rachmat', '0000-00-00', '1212', '121212aaa', 2, 1, 'admin.jpg');
+(5, '2016-05-10', '2016-07-27', '2017-08-15 09:50:30', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', 'Mugi Rachmat', '0000-00-00', '1212', '121212aaa', 2, 1, 'admin.jpg');
 
 --
 -- Indexes for dumped tables
@@ -7102,7 +7179,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `activities`
 --
 ALTER TABLE `activities`
-  MODIFY `id_activities` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2007;
+  MODIFY `id_activities` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2077;
 --
 -- AUTO_INCREMENT for table `agama`
 --
@@ -7147,7 +7224,7 @@ ALTER TABLE `pekerjaan`
 -- AUTO_INCREMENT for table `pencaker`
 --
 ALTER TABLE `pencaker`
-  MODIFY `kd_pencaker` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `kd_pencaker` mediumint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 --
 -- AUTO_INCREMENT for table `pencarikerja`
 --
@@ -7182,7 +7259,7 @@ ALTER TABLE `serikat`
 -- AUTO_INCREMENT for table `serikat_perusahaan`
 --
 ALTER TABLE `serikat_perusahaan`
-  MODIFY `id_serikat_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_serikat_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `statusnikah`
 --
@@ -7197,7 +7274,7 @@ ALTER TABLE `umpi`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

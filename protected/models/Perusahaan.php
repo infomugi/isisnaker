@@ -61,6 +61,7 @@ class Perusahaan extends CActiveRecord
 			array('jumlah_tki_wanita, jumlah_tki_pria, jumlah_tka_wanita, jumlah_tka_pria, serikat_jumlah_wanita, serikat_jumlah_pria, apindo_anggota_aktif, bpjs_ketenagakerjaan_wanita, bpjs_ketenagakerjaan_pria, bpjs_kesehatan_wanita, bpjs_kesehatan_pria, status', 'numerical', 'integerOnly'=>true),
 			array('klui', 'length', 'max'=>15),
 			array('nama', 'length', 'max'=>150),
+			array('perusahaan_mulai_berlaku, perusahaan_akhir_berlaku, bipartit_mulai_berlaku, bipartit_akhir_berlaku', 'length', 'max'=>150),
 			array('pimpinan, jenis_usaha, jenis_pemodalan, klasifikasi, serikat_nomor, serikat_ketua, bipartit_nomor, kopkar_badan_hukum, kopkar_tidak_badan_hukum', 'length', 'max'=>50),
 			array('kecamatan, perusahaan_nomor_sk, apindo_no_kontak', 'length', 'max'=>25),
 			array('serikat_nama', 'length', 'max'=>255),
@@ -204,15 +205,15 @@ class Perusahaan extends CActiveRecord
 	
 	protected function afterFind()
 	{
-		$this->perusahaan_akhir_berlaku = date('d-m-Y', strtotime($this->perusahaan_akhir_berlaku));
-		$this->perusahaan_mulai_berlaku = date('d-m-Y', strtotime($this->perusahaan_mulai_berlaku));
-		$this->bipartit_akhir_berlaku = date('d-m-Y', strtotime($this->bipartit_akhir_berlaku));
-		$this->bipartit_mulai_berlaku = date('d-m-Y', strtotime($this->bipartit_mulai_berlaku));
+		$this->perusahaan_akhir_berlaku = date('Y-m-d', strtotime($this->perusahaan_akhir_berlaku));
+		$this->perusahaan_mulai_berlaku = date('Y-m-d', strtotime($this->perusahaan_mulai_berlaku));
+		$this->bipartit_akhir_berlaku = date('Y-m-d', strtotime($this->bipartit_akhir_berlaku));
+		$this->bipartit_mulai_berlaku = date('Y-m-d', strtotime($this->bipartit_mulai_berlaku));
 		return TRUE;
 	}	
 
 	public function tanggal($data){
-		if($data=="01-01-1970"){
+		if($data=="1970-01-01"){
 			return "-";
 		}else{
 			return $data;
@@ -220,7 +221,7 @@ class Perusahaan extends CActiveRecord
 	}
 
 	public function expire($date){
-		$tgl_sekarang = date("d-m-Y");
+		$tgl_sekarang = date("Y-m-d");
 		$tgl_expired = $date;
 		if($tgl_sekarang <= $tgl_expired )
 		{

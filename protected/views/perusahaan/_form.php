@@ -376,183 +376,225 @@
 
 								<div class="col-sm-8">
 									<?php echo $form->error($model,'bipartit_mulai_berlaku'); ?>
-									<?php echo $form->textField($model,'bipartit_mulai_berlaku',array('class'=>'form-control')); ?>
-								</div>
-
-							</div>  
-
-
-							<div class="form-group">
-
-								<div class="col-sm-4 control-label">
-									<?php echo $form->labelEx($model,'bipartit_akhir_berlaku'); ?>
-								</div>   
-
-								<div class="col-sm-8">
-									<?php echo $form->error($model,'bipartit_akhir_berlaku'); ?>
-									<?php echo $form->textField($model,'bipartit_akhir_berlaku',array('class'=>'form-control')); ?>
-								</div>
-
-							</div>  
-
-
-							<div class="form-group">
-
-								<div class="col-sm-4 control-label">
-									<?php echo $form->labelEx($model,'apindo_anggota_aktif'); ?>
-								</div>   
-
-								<div class="col-sm-8">
-									<?php echo $form->error($model,'apindo_anggota_aktif'); ?>
-									<?php echo $form->textField($model,'apindo_anggota_aktif',array('class'=>'form-control')); ?>
-								</div>
-
-							</div>  
-
-
-							<div class="form-group">
-
-								<div class="col-sm-4 control-label">
-									<?php echo $form->labelEx($model,'apindo_no_kontak'); ?>
-								</div>   
-
-								<div class="col-sm-8">
-									<?php echo $form->error($model,'apindo_no_kontak'); ?>
-									<?php echo $form->textField($model,'apindo_no_kontak',array('class'=>'form-control')); ?>
-								</div>
-
-							</div>  
-
-
-							<div class="form-group">
-
-								<div class="col-sm-4 control-label">
-									<?php echo $form->labelEx($model,'bpjs_ketenagakerjaan_wanita'); ?>
-								</div>   
-
-								<div class="col-sm-8">
-									<?php echo $form->error($model,'bpjs_ketenagakerjaan_wanita'); ?>
-									<?php echo $form->textField($model,'bpjs_ketenagakerjaan_wanita',array('class'=>'form-control')); ?>
-								</div>
-
-							</div>  
-
-
-							<div class="form-group">
-
-								<div class="col-sm-4 control-label">
-									<?php echo $form->labelEx($model,'bpjs_ketenagakerjaan_pria'); ?>
-								</div>   
-
-								<div class="col-sm-8">
-									<?php echo $form->error($model,'bpjs_ketenagakerjaan_pria'); ?>
-									<?php echo $form->textField($model,'bpjs_ketenagakerjaan_pria',array('class'=>'form-control')); ?>
-								</div>
-
-							</div>  
-
-
-							<div class="form-group">
-
-								<div class="col-sm-4 control-label">
-									<?php echo $form->labelEx($model,'bpjs_kesehatan_wanita'); ?>
-								</div>   
-
-								<div class="col-sm-8">
-									<?php echo $form->error($model,'bpjs_kesehatan_wanita'); ?>
-									<?php echo $form->textField($model,'bpjs_kesehatan_wanita',array('class'=>'form-control')); ?>
-								</div>
-
-							</div>  
-
-
-							<div class="form-group">
-
-								<div class="col-sm-4 control-label">
-									<?php echo $form->labelEx($model,'bpjs_kesehatan_pria'); ?>
-								</div>   
-
-								<div class="col-sm-8">
-									<?php echo $form->error($model,'bpjs_kesehatan_pria'); ?>
-									<?php echo $form->textField($model,'bpjs_kesehatan_pria',array('class'=>'form-control')); ?>
-								</div>
-
-							</div>  
-
-
-							<div class="form-group">
-
-								<div class="col-sm-4 control-label">
-									<?php echo $form->labelEx($model,'kopkar_badan_hukum'); ?>
-								</div>   
-
-								<div class="col-sm-8">
-									<?php echo $form->error($model,'kopkar_badan_hukum'); ?>
-									<?php echo $form->textField($model,'kopkar_badan_hukum',array('class'=>'form-control')); ?>
-								</div>
-
-							</div>  
-
-
-							<div class="form-group">
-
-								<div class="col-sm-4 control-label">
-									<?php echo $form->labelEx($model,'kopkar_tidak_badan_hukum'); ?>
-								</div>   
-
-								<div class="col-sm-8">
-									<?php echo $form->error($model,'kopkar_tidak_badan_hukum'); ?>
-									<?php echo $form->textField($model,'kopkar_tidak_badan_hukum',array('class'=>'form-control')); ?>
-								</div>
-
-							</div>  
-
-
-							<div class="form-group">
-
-								<div class="col-sm-4 control-label">
-									<?php echo $form->labelEx($model,'keterangan'); ?>
-								</div>   
-
-								<div class="col-sm-8">
-									<?php echo $form->error($model,'keterangan'); ?>
-									<?php echo $form->textArea($model,'keterangan',array('class'=>'form-control')); ?>
-								</div>
-
-							</div>  
-
-
-							<div class="form-group">
-
-								<div class="col-sm-4 control-label">
-									<?php echo $form->labelEx($model,'status'); ?>
-								</div>   
-
-								<div class="col-sm-8">
-									<?php echo $form->error($model,'status'); ?>
 									<?php
-									echo $form->radioButtonList($model,'status',
-										array('Aktif'=>'Aktif','Tidak Aktif'=>'Tidak Aktif'),
-										array(
-											'template'=>'{input}{label}',
-											'separator'=>'',
-											'labelOptions'=>array(
-												'class'=>'minimal', 'style'=>'padding-right:20px;margin-left:5px'),
-
-											)                              
-										);
+									$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+										'model'=>$model,
+										'language'=>'id',
+										'attribute'=>'bipartit_mulai_berlaku',
+										'value'=>Yii::app()->dateFormatter->format("dd-MM-yyyy",strtotime($model->bipartit_mulai_berlaku)),
+										'htmlOptions'=>array(
+											'class'=>'form-control',
+											'tabindex'=>2
+											),
+										'options'=>array(
+											'dateFormat' => 'd-mm-yy',
+											'language'=>'id',
+											'showAnim'=>'drop',
+											'showButtonPanel'=>true,
+											'changeMonth'=>true,
+											'yearRange'=>'1960:2000',
+											'changeYear'=>true,
+											'defaultDate'=>'+1w',
+											),
+										));
 										?>
 									</div>
 
 								</div>  
 
-								<div class="form-group">
-									<div class="col-md-12">  
-									</br></br>
-									<?php echo CHtml::submitButton($model->isNewRecord ? 'Submit' : 'Edit', array('class' => 'btn btn-info btn-flat pull-right')); ?>
-								</div>
-							</div>
 
-							<?php $this->endWidget(); ?>
+								<div class="form-group">
+
+									<div class="col-sm-4 control-label">
+										<?php echo $form->labelEx($model,'bipartit_akhir_berlaku'); ?>
+									</div>   
+
+									<div class="col-sm-8">
+										<?php echo $form->error($model,'bipartit_akhir_berlaku'); ?>
+										<?php
+										$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+											'model'=>$model,
+											'language'=>'id',
+											'attribute'=>'bipartit_akhir_berlaku',
+											'value'=>Yii::app()->dateFormatter->format("dd-MM-yyyy",strtotime($model->bipartit_akhir_berlaku)),
+											'htmlOptions'=>array(
+												'class'=>'form-control',
+												'tabindex'=>2
+												),
+											'options'=>array(
+												'dateFormat' => 'd-mm-yy',
+												'language'=>'id',
+												'showAnim'=>'drop',
+												'showButtonPanel'=>true,
+												'changeMonth'=>true,
+												'yearRange'=>'1960:2000',
+												'changeYear'=>true,
+												'defaultDate'=>'+1w',
+												),
+											));
+											?>
+										</div>
+
+									</div>  
+
+
+									<div class="form-group">
+
+										<div class="col-sm-4 control-label">
+											<?php echo $form->labelEx($model,'apindo_anggota_aktif'); ?>
+										</div>   
+
+										<div class="col-sm-8">
+											<?php echo $form->error($model,'apindo_anggota_aktif'); ?>
+											<?php echo $form->textField($model,'apindo_anggota_aktif',array('class'=>'form-control')); ?>
+										</div>
+
+									</div>  
+
+
+									<div class="form-group">
+
+										<div class="col-sm-4 control-label">
+											<?php echo $form->labelEx($model,'apindo_no_kontak'); ?>
+										</div>   
+
+										<div class="col-sm-8">
+											<?php echo $form->error($model,'apindo_no_kontak'); ?>
+											<?php echo $form->textField($model,'apindo_no_kontak',array('class'=>'form-control')); ?>
+										</div>
+
+									</div>  
+
+
+									<div class="form-group">
+
+										<div class="col-sm-4 control-label">
+											<?php echo $form->labelEx($model,'bpjs_ketenagakerjaan_wanita'); ?>
+										</div>   
+
+										<div class="col-sm-8">
+											<?php echo $form->error($model,'bpjs_ketenagakerjaan_wanita'); ?>
+											<?php echo $form->textField($model,'bpjs_ketenagakerjaan_wanita',array('class'=>'form-control')); ?>
+										</div>
+
+									</div>  
+
+
+									<div class="form-group">
+
+										<div class="col-sm-4 control-label">
+											<?php echo $form->labelEx($model,'bpjs_ketenagakerjaan_pria'); ?>
+										</div>   
+
+										<div class="col-sm-8">
+											<?php echo $form->error($model,'bpjs_ketenagakerjaan_pria'); ?>
+											<?php echo $form->textField($model,'bpjs_ketenagakerjaan_pria',array('class'=>'form-control')); ?>
+										</div>
+
+									</div>  
+
+
+									<div class="form-group">
+
+										<div class="col-sm-4 control-label">
+											<?php echo $form->labelEx($model,'bpjs_kesehatan_wanita'); ?>
+										</div>   
+
+										<div class="col-sm-8">
+											<?php echo $form->error($model,'bpjs_kesehatan_wanita'); ?>
+											<?php echo $form->textField($model,'bpjs_kesehatan_wanita',array('class'=>'form-control')); ?>
+										</div>
+
+									</div>  
+
+
+									<div class="form-group">
+
+										<div class="col-sm-4 control-label">
+											<?php echo $form->labelEx($model,'bpjs_kesehatan_pria'); ?>
+										</div>   
+
+										<div class="col-sm-8">
+											<?php echo $form->error($model,'bpjs_kesehatan_pria'); ?>
+											<?php echo $form->textField($model,'bpjs_kesehatan_pria',array('class'=>'form-control')); ?>
+										</div>
+
+									</div>  
+
+
+									<div class="form-group">
+
+										<div class="col-sm-4 control-label">
+											<?php echo $form->labelEx($model,'kopkar_badan_hukum'); ?>
+										</div>   
+
+										<div class="col-sm-8">
+											<?php echo $form->error($model,'kopkar_badan_hukum'); ?>
+											<?php echo $form->textField($model,'kopkar_badan_hukum',array('class'=>'form-control')); ?>
+										</div>
+
+									</div>  
+
+
+									<div class="form-group">
+
+										<div class="col-sm-4 control-label">
+											<?php echo $form->labelEx($model,'kopkar_tidak_badan_hukum'); ?>
+										</div>   
+
+										<div class="col-sm-8">
+											<?php echo $form->error($model,'kopkar_tidak_badan_hukum'); ?>
+											<?php echo $form->textField($model,'kopkar_tidak_badan_hukum',array('class'=>'form-control')); ?>
+										</div>
+
+									</div>  
+
+
+									<div class="form-group">
+
+										<div class="col-sm-4 control-label">
+											<?php echo $form->labelEx($model,'keterangan'); ?>
+										</div>   
+
+										<div class="col-sm-8">
+											<?php echo $form->error($model,'keterangan'); ?>
+											<?php echo $form->textArea($model,'keterangan',array('class'=>'form-control')); ?>
+										</div>
+
+									</div>  
+
+
+									<div class="form-group">
+
+										<div class="col-sm-4 control-label">
+											<?php echo $form->labelEx($model,'status'); ?>
+										</div>   
+
+										<div class="col-sm-8">
+											<?php echo $form->error($model,'status'); ?>
+											<?php
+											echo $form->radioButtonList($model,'status',
+												array('Aktif'=>'Aktif','Tidak Aktif'=>'Tidak Aktif'),
+												array(
+													'template'=>'{input}{label}',
+													'separator'=>'',
+													'labelOptions'=>array(
+														'class'=>'minimal', 'style'=>'padding-right:20px;margin-left:5px'),
+
+													)                              
+												);
+												?>
+											</div>
+
+										</div>  
+
+										<div class="form-group">
+											<div class="col-md-12">  
+											</br></br>
+											<?php echo CHtml::submitButton($model->isNewRecord ? 'Submit' : 'Edit', array('class' => 'btn btn-info btn-flat pull-right')); ?>
+										</div>
+									</div>
+
+									<?php $this->endWidget(); ?>
 
 </div></div><!-- form -->
