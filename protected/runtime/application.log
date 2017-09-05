@@ -11086,3 +11086,39 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/isisnaker/index.php?r=pencaker/excel
 ---
+2017/08/31 11:24:05 [error] [exception.CHttpException.404] CHttpException: Sistem tidak bisa menemukan action "excel" seperti yang diminta. in C:\xampp\htdocs\isisnaker\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\isisnaker\framework\web\CController.php(270): CController->missingAction('excel')
+#1 C:\xampp\htdocs\isisnaker\framework\web\CWebApplication.php(282): CController->run('excel')
+#2 C:\xampp\htdocs\isisnaker\framework\web\CWebApplication.php(141): CWebApplication->runController('pencaker/excel')
+#3 C:\xampp\htdocs\isisnaker\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\isisnaker\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/isisnaker/index.php?r=pencaker/excel
+---
+2017/08/31 11:28:12 [error] [php] fopen(Laporan Pencaker.xls): failed to open stream: Permission denied (C:\xampp\htdocs\isisnaker\protected\vendors\excelwriter\class.ole_pps_root.php:73)
+Stack trace:
+#0 C:\xampp\htdocs\isisnaker\protected\vendors\excelwriter\class.writeexcel_workbook.inc.php(493): writeexcel_workbookbig->_store_OLE_file()
+#1 C:\xampp\htdocs\isisnaker\protected\vendors\excelwriter\class.writeexcel_workbook.inc.php(119): writeexcel_workbookbig->_store_workbook()
+#2 C:\xampp\htdocs\isisnaker\protected\components\EExcelWriter.php(167): writeexcel_workbookbig->close()
+#3 C:\xampp\htdocs\isisnaker\framework\web\CBaseController.php(181): EExcelWriter->run()
+#4 C:\xampp\htdocs\isisnaker\protected\views\pencaker\report.php(32): PencakerController->widget()
+#5 C:\xampp\htdocs\isisnaker\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\isisnaker\framework\web\CBaseController.php(95): PencakerController->renderInternal()
+#7 C:\xampp\htdocs\isisnaker\framework\web\CController.php(869): PencakerController->renderFile()
+#8 C:\xampp\htdocs\isisnaker\framework\web\CController.php(782): PencakerController->renderPartial()
+#9 C:\xampp\htdocs\isisnaker\protected\controllers\PencakerController.php(146): PencakerController->render()
+#10 C:\xampp\htdocs\isisnaker\framework\web\actions\CInlineAction.php(49): PencakerController->actionReport()
+#11 C:\xampp\htdocs\isisnaker\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\isisnaker\framework\web\filters\CFilterChain.php(133): PencakerController->runAction()
+#13 C:\xampp\htdocs\isisnaker\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\isisnaker\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\isisnaker\framework\web\filters\CInlineFilter.php(58): PencakerController->filterAccessControl()
+#16 C:\xampp\htdocs\isisnaker\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\isisnaker\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\isisnaker\framework\web\CController.php(265): PencakerController->runActionWithFilters()
+#19 C:\xampp\htdocs\isisnaker\framework\web\CWebApplication.php(282): PencakerController->run()
+#20 C:\xampp\htdocs\isisnaker\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\isisnaker\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\isisnaker\index.php(15): CWebApplication->run()
+REQUEST_URI=/isisnaker/index.php?r=pencaker/report
